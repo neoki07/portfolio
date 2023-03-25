@@ -1,22 +1,21 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Profile from "../components/Profile.astro";
+
 ---
 
-<Layout title="Home - ot07's portfolio">
+<Layout title="Projects - ot07's portfolio">
   <main>
-    <Profile />
-    <div class="space-y-5 text-gray-700">
-      <p class="flex items-center">
-        Hi there<span class="text-2xl ml-1">👋</span>
-      </p>
-      <p>
-        I am <strong>ot07</strong>, a web developer.
-        I specialize in front-end development with React, and engage in back-end development using Laravel. 
-      </p>
-      <p>
-        I've also developed various open-source projects, which you can find on <a href="projects">Projects page</a>.
-      </p>
+    <h1 class="text-4xl">Projects</h1>
+    <div class="mt-8 space-y-8">
+      <div>
+        <h3 class="font-semibold text-gray-700">JavaScript Libraries</h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
+          <a href="https://github.com/resonance-box/sf2-synth-audio-worklet" target="_blank" class="px-4 py-3 rounded-lg space-y-1 hover:bg-gray-50 overflow-hidden shadow border border-gray-50">
+            <div class="text-gray-500 font-medium">sf2-synth-audio-worklet</div>
+            <div class="text-sm text-gray-400 font-light">An Audio Worklet-based SoundFont2 player</div>
+          </a>
+        </div>
+      </div>
     </div>
   </main>
 </Layout>
