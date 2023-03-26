@@ -1,16 +1,18 @@
 ---
 import GithubIcon from "./GithubIcon.astro";
+import ThemeIcon from "./ThemeIcon.astro";
 ---
 
 <header class="p-8">
   <nav class="flex">
     <div class="w-full"></div>
-    <div class="w-full justify-end items-center space-x-4 text-gray-400 flex">
-      <a href="/" class="hover:text-gray-500">Home</a>
-      <a href="projects" class="hover:text-gray-500">Projects</a>
-      <a href="https://github.com/ot07" target="_blank" class="hover:text-gray-500">
+    <div class="w-full justify-end items-center space-x-4 text-gray-400 dark:text-gray-500 flex">
+      <a href="/" class="hover:text-gray-500 dark:hover:text-gray-400">Home</a>
+      <a href="projects" class="hover:text-gray-500 dark:hover:text-gray-400">Projects</a>
+      <a href="https://github.com/ot07" target="_blank" class="hover:text-gray-500 dark:hover:text-gray-400">
         <GithubIcon />
       </a>
+      <ThemeIcon />
     </div>
   </nav>
 </header>
