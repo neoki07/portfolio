@@ -65,15 +65,13 @@
     document.documentElement.classList.add("dark");
     themeToggle.checked = true;
   }
-  
-  const themeToggleUi = document.getElementById("theme-toggle-ui");
-  themeToggleUi.classList.add('after:transition')
 
   window.localStorage.setItem("theme", theme);
 </script>
 
 <script>
   const handleToggle = () => {
+    console.log("handleToggle");
     const element = document.documentElement;
     element.classList.toggle("dark");
     
