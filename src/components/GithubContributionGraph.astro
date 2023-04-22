@@ -1,0 +1,85 @@
+---
+const response = await fetch("https://api.github.com/graphql",
+  {
+    method:'POST',
+    headers: {
+      'Accept': 'application/json',
+      'Content-Type': 'application/json',
+      'Authorization': `token ${import.meta.env.GITHUB_ACCESS_TOKEN}`,
+    },
+    body: JSON.stringify({
+      query: `
+        query($username:String!) {
+          user(login: $username){
+            contributionsCollection {
+              contributionCalendar {
+                totalContributions
+                weeks {
+                  contributionDays {
+                    contributionCount
+                    date
+                  }
+                }
+              }
+            }
+          }
+        }
+      `,
+      variables: {
+        username: import.meta.env.GITHUB_USERNAME
+      }
+    }),
+  })
+
+const data = await response.json()
+
+const weeklyContributions = [[], [], [], [], [], [], []];
+
+const weeks = data.data.user.contributionsCollection.contributionCalendar.weeks;
+
+weeks.forEach((week) => {
+  const contributionDaysList = week.contributionDays;
+  
+  contributionDaysList.forEach((day) => {
+    const index = new Date(day.date).getDay();
+    
+    weeklyContributions[index].push(day);
+  });
+});
+
+function getContributionCountLevel(contributionCount: number) {
+  if (contributionCount === 0) {
+    return 0;
+  } else if (contributionCount <= 30) {
+    return Math.ceil(contributionCount / 5);
+  }
+  return 7;
+}
+
+const contributionColorStyles = [
+  "bg-gray-200 dark:bg-gray-800", // 0
+  "bg-sky-200 dark:bg-sky-900",   // 1--5
+  "bg-sky-300 dark:bg-sky-700",   // 6--10
+  "bg-sky-500 dark:bg-sky-500",   // 11--15
+  "bg-sky-600 dark:bg-sky-400",   // 16--20
+  "bg-sky-700 dark:bg-sky-300",   // 21--25
+  "bg-sky-800 dark:bg-sky-200",   // 26--30
+  "bg-sky-900 dark:bg-sky-100",   // 31--
+];
+
+function getColorStyle(contributionCount: number) {
+  return contributionColorStyles[getContributionCountLevel(contributionCount)];
+}
+---
+
+<table class="border-separate border-spacing-[3px] flex items-center justify-center">
+  <tbody>
+    {weeklyContributions.map((contributions) => (
+      <tr>
+        {contributions.map((contribution) => (
+          <td class={`${getColorStyle(contribution.contributionCount)} w-2.5 h-2.5 rounded-sm`}></td>
+        ))}
+      </tr>
+    ))}
+  </tbody>
+</table>

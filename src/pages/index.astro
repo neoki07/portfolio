@@ -2,11 +2,16 @@
 import Layout from "../layouts/Layout.astro";
 import Profile from "../components/Profile.astro";
 import AnchorText from "../components/AnchorText.astro";
+import GithubContributionGraph from "../components/GithubContributionGraph.astro";
 ---
 
 <Layout title="Home - ot07's portfolio">
-  <main>
-    <Profile />
+  <main class="space-y-12">
+    <div class="space-y-4">
+      <Profile />
+      <GithubContributionGraph />
+    </div>
+    <hr class="border-gray-200 dark:border-gray-800"/>
     <div class="space-y-5 text-gray-700 dark:text-gray-400">
       <p class="flex items-center">
         Hi there<span class="text-2xl ml-1">👋</span>
