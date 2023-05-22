@@ -6,7 +6,7 @@ import GithubContributionGraph from "../components/GithubContributionGraph.astro
 ---
 
 <Layout title="ot07's portfolio">
-  <main class="space-y-12">
+  <main class="space-y-12 text-gray-700 dark:text-gray-400">
     <div class="space-y-4">
       <Profile />
       <GithubContributionGraph />
@@ -96,6 +96,24 @@ import GithubContributionGraph from "../components/GithubContributionGraph.astro
         </div>
       </div>
     </div>
+    
+    <hr class="border-gray-200 dark:border-gray-800"/>
+    <h1 class="text-4xl dark:text-white">OSS Contributions</h1>
+    <div class="mt-8 space-y-8">
+      <div>
+        <h3 class="font-semibold text-gray-700 dark:text-gray-300">Prettier</h3>
+        <ul class="list-disc mt-2 [&>li]:ml-5">
+          <li>
+            <AnchorText href="https://github.com/prettier/prettier/pull/14830" target="_blank">
+              TypeScript: Fix issue with double semicolon caused by // prettier-ignore on a call signature line (#14830)
+            </AnchorText>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    
   </main>
 </Layout>
 
