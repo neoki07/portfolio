@@ -3,6 +3,7 @@ import Layout from "../layouts/Layout.astro";
 import Profile from "../components/Profile.astro";
 import AnchorText from "../components/AnchorText.astro";
 import GithubContributionGraph from "../components/GithubContributionGraph.astro";
+import GithubMostUsedLanguages from "../components/GithubMostUsedLanguages.astro";
 ---
 
 <Layout title="ot07's portfolio">
@@ -53,6 +54,14 @@ import GithubContributionGraph from "../components/GithubContributionGraph.astro
           <img alt="docker" src="https://img.shields.io/badge/Docker-2CA5E0?style=flat&logo=docker&logoColor=white" />
           <img alt="laravel" src="https://img.shields.io/badge/Laravel-FF2D20?style=flat&logo=laravel&logoColor=white" />
           <img alt="ansible" src="https://img.shields.io/badge/Ansible-000000?style=flat&logo=ansible&logoColor=white" />
+        </div>
+      </div>
+      <div>
+        <h3 class="font-semibold text-gray-700 dark:text-gray-300">
+          Most Used Languages
+        </h3>
+        <div class="mt-4">
+          <GithubMostUsedLanguages />
         </div>
       </div>
     </div>

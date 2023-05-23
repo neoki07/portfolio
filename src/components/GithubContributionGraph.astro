@@ -104,7 +104,9 @@ function getWeekday(date: Date) {
             
             return (
               <td class={`${getColorStyle(contribution.contributionCount)} ${isFirstHalfContribution ? 'hidden md:table-cell' : ''} w-2.5 h-2.5 rounded-sm relative group`}>
-                <span class="opacity-0 invisible absolute left-1/2 -translate-x-1/2 top-[-45px] inline-block whitespace-nowrap z-10 pointer-events-none rounded-md px-[0.875rem] py-[0.5625rem] bg-black text-white dark:bg-gray-500 dark:text-gray-300 text-xs group-hover:opacity-100 group-hover:visible before:content-[''] before:absolute before:bottom-[-13px] before:left-1/2 before:ml-[-7px] before:z-10 before:pointer-events-none before:border-[7px] before:border-x-transparent before:border-b-transparent before:dark:border-x-transparent before:dark:border-b-transparent before:border-black before:dark:border-gray-500">{`${contribution.contributionCount} contributions on ${getWeekday(date)}, ${formatDate(date)}`}</span>
+                <span class="opacity-0 invisible absolute left-1/2 -translate-x-1/2 top-[-45px] inline-block whitespace-nowrap z-10 pointer-events-none rounded-md px-[0.875rem] py-[0.5625rem] bg-black text-white dark:bg-gray-500 dark:text-gray-300 text-xs group-hover:opacity-100 group-hover:visible before:content-[''] before:absolute before:bottom-[-13px] before:left-1/2 before:ml-[-7px] before:z-10 before:pointer-events-none before:border-[7px] before:border-x-transparent before:border-b-transparent before:dark:border-x-transparent before:dark:border-b-transparent before:border-black before:dark:border-gray-500">
+                  {`${contribution.contributionCount} contributions on ${getWeekday(date)}, ${formatDate(date)}`}
+                </span>
               </td>
             )
           })}
