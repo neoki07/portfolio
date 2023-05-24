@@ -2,8 +2,97 @@
 import Layout from "../layouts/Layout.astro";
 import Profile from "../components/Profile.astro";
 import AnchorText from "../components/AnchorText.astro";
+import SkillBadge from "../components/SkillBadge.astro";
+import GithubIcon from "../components/GithubIcon.astro";
+import ExternalLinkIcon from "../components/ExternalLinkIcon.astro";
 import GithubContributionGraph from "../components/GithubContributionGraph.astro";
 import GithubMostUsedLanguages from "../components/GithubMostUsedLanguages.astro";
+
+const projects = [
+  {
+    name: "Myposts",
+    repoUrl: "https://github.com/ot07/myposts",
+    demoUrl: "https://myposts-hazel.vercel.app",
+    description: `This website is a platform dedicated to sharing posts in Markdown format.
+Users can explore posts created by others without the need for logging in.
+Additionally, users have the option to log in using their GitHub accounts and create their own posts on the site.`,
+    skills: [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "tRPC",
+      "Tailwind CSS",
+      "Prisma",
+      "React Hook Form",
+      "Zod",
+      "Markdoc",
+    ],
+  },
+  {
+    name: "Next Bazaar",
+    repoUrl: "https://github.com/ot07/next-bazaar",
+    demoUrl: "https://next-bazaar.vercel.app",
+    description: `This website is a user-friendly online bazaar website where users can buy and sell products.
+On this platform, users can easily list their own items for sale, while buyers can browse through a wide range of product categories.`,
+    skills: [
+      "TypeScript",
+      "React",
+      "Next.js",
+      "Tanstack Query",
+      "Mantine",
+      "React Hook Form",
+      "Zod",
+      "orval",
+      "Go",
+      "Fiber",
+      "sqlc",
+      "Swagger",
+    ],
+  },
+  {
+    name: "Music Transformer Playground",
+    repoUrl: "https://github.com/ot07/music-transformer-playground",
+    demoUrl: "https://music-transformer-playground.vercel.app",
+    description: `This website is a playground where you can easily generate piano performances using an AI called Music Transformer.`,
+    skills: [
+      "TypeScript",
+      "React",
+      "Vite",
+      "Tanstack Query",
+      "Python",
+      "FastAPI",
+      "Music Transformer",
+      "recital (my library)",
+    ],
+  },
+  {
+    name: "Recital",
+    repoUrl: "https://github.com/resonance-box/recital",
+    description: `A musical tools for the browser.`,
+    skills: [
+      "TypeScript",
+      "React",
+      "Vite",
+      "Zustand",
+      "Immer",
+      "sf2-synth-audio-worklet (my library)",
+    ],
+  },
+  {
+    name: "sf2-synth-audio-worklet",
+    repoUrl: "https://github.com/resonance-box/sf2-synth-audio-worklet",
+    description: `An Audio Worklet-based SoundFont2 synthesizer.`,
+    skills: [
+      "TypeScript",
+      "Vite",
+      "Rollup",
+      "Audio Worklet",
+      "Rust",
+      "WebAssembly",
+      "SoundFont2",
+    ],
+  }
+];
 ---
 
 <Layout title="ot07's portfolio">
@@ -68,42 +157,49 @@ import GithubMostUsedLanguages from "../components/GithubMostUsedLanguages.astro
 
     <hr class="border-gray-200 dark:border-gray-800"/>
     <h1 class="text-4xl dark:text-white">Projects</h1>
-    <div class="mt-8 space-y-8">
-      <div>
-        <h3 class="font-semibold text-gray-700 dark:text-gray-300">JavaScript Libraries</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-          <a href="https://github.com/resonance-box/sf2-synth-audio-worklet" target="_blank" class="px-4 py-3 rounded-lg space-y-1 hover:bg-gray-50 overflow-hidden shadow border border-gray-50 dark:border-gray-800 dark:hover:bg-gray-800">
-            <div class="text-gray-600 dark:text-gray-400">sf2-synth-audio-worklet</div>
-            <div class="text-sm text-gray-400 dark:text-gray-500 font-light">An Audio Worklet-based SoundFont2 synthesizer</div>
-          </a>
-          <a href="https://github.com/resonance-box/recital" target="_blank" class="px-4 py-3 rounded-lg space-y-1 hover:bg-gray-50 overflow-hidden shadow border border-gray-50 dark:border-gray-800 dark:hover:bg-gray-800">
-            <div class="text-gray-600 dark:text-gray-400">recital</div>
-            <div class="text-sm text-gray-400 dark:text-gray-500 font-light">A musical tools for the browser</div>
-          </a>
-        </div>
-      </div>
-      <div>
-        <h3 class="font-semibold text-gray-700 dark:text-gray-300">Websites</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-          <a href="https://music-transformer-playground.vercel.app/" target="_blank" class="px-4 py-3 rounded-lg space-y-1 hover:bg-gray-50 overflow-hidden shadow border border-gray-50 dark:border-gray-800 dark:hover:bg-gray-800">
-            <div class="text-gray-600 dark:text-gray-400">Music Transformer Playground</div>
-            <div class="text-sm text-gray-400 dark:text-gray-500 font-light">A playground to generate piano performances using Music Transformer</div>
-          </a>
-        </div>
-      </div>
-      <div>
-        <h3 class="font-semibold text-gray-700 dark:text-gray-300">Websites for Studying</h3>
-        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-4">
-          <a href="https://myposts-hazel.vercel.app/" target="_blank" class="px-4 py-3 rounded-lg space-y-1 hover:bg-gray-50 overflow-hidden shadow border border-gray-50 dark:border-gray-800 dark:hover:bg-gray-800">
-            <div class="text-gray-600 dark:text-gray-400">myposts</div>
-            <div class="text-sm text-gray-400 dark:text-gray-500 font-light">A website for submitting posts written in Markdown format</div>
-          </a>
-          <a href="https://next-bazaar.vercel.app/" class="px-4 py-3 rounded-lg space-y-1 hover:bg-gray-50 overflow-hidden shadow border border-gray-50 dark:border-gray-800 dark:hover:bg-gray-800">
-            <div class="text-gray-600 dark:text-gray-400">Next Bazaar</div>
-            <div class="text-sm text-gray-400 dark:text-gray-500 font-light">A user-friendly online bazaar where users can both buy and sell their items</div>
-          </a>
-        </div>
-      </div>
+    
+    <div class="mt-8 space-y-4">
+      {
+        projects.map((project) => (
+          <div class="border p-6 rounded-lg dark:border-gray-800 space-y-2">
+            <div class="flex items-center space-x-2">
+              <h3 class="font-bold text-slate-700 dark:text-gray-200 text-lg">
+                {project.name}
+              </h3>
+
+              <div class="text-gray-400 dark:text-gray-500 child:dark:hover:text-gray-400">
+                <a href={project.repoUrl} target="_blank" class="hover:text-gray-500 dark:hover:text-gray-400">
+                  <GithubIcon />
+                </a>
+              </div>
+              
+              {project.demoUrl &&
+                <div class="text-gray-400 dark:text-gray-500 child:dark:hover:text-gray-400">
+                  <a href={project.demoUrl} target="_blank" class="hover:text-gray-500 dark:hover:text-gray-400">
+                    <ExternalLinkIcon />
+                  </a>
+                </div>
+              }
+            </div>
+
+            <p class="text-sm leading-normal">
+              {project.description}
+            </p>
+
+            <ul class="flex flex-wrap">
+              {
+                project.skills.map((skill) => (
+                  <li class="mr-1.5 mt-2">
+                    <SkillBadge>
+                      {skill}
+                    </SkillBadge>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        ))
+      }
     </div>
     
     <hr class="border-gray-200 dark:border-gray-800"/>
