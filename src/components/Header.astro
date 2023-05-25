@@ -1,5 +1,6 @@
 ---
 import GithubIcon from "./GithubIcon.astro";
+import LanguagePicker from './LanguagePicker.astro'
 import ThemeToggle from "./ThemeToggle.astro";
 ---
 
@@ -10,15 +11,7 @@ import ThemeToggle from "./ThemeToggle.astro";
       <a href="https://github.com/ot07" target="_blank" class="hover:text-gray-500 hover:dark:text-gray-400">
         <GithubIcon />
       </a>
-      <div class="flex items-center h-full space-x-1.5">
-        <a href="#" class="font-light text-sm hover:text-gray-500 hover:dark:text-gray-400">
-          EN
-        </a>
-        <div class="w-[0.0625rem] bg-gray-300 dark:bg-gray-700 h-4" />
-        <a href="#" class="font-light text-sm hover:text-gray-500 hover:dark:text-gray-400">
-          JA
-        </a>
-      </div>
+      <LanguagePicker />
       <ThemeToggle />
     </div>
   </nav>

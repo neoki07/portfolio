@@ -1,0 +1,13 @@
+---
+import { languages } from '../i18n/translates';
+---
+<ul class="flex items-center justify-center h-full space-x-1.5">
+  {Object.entries(languages).map(([lang, label], index) => (
+    <>
+      {index !== 0 && <div class="w-[0.0625rem] bg-gray-300 dark:bg-gray-700 h-4" />}
+      <li class="flex items-center justify-center">
+        <a href={`/${lang}/`} class="font-light text-sm hover:text-gray-500 hover:dark:text-gray-400">{label}</a>
+      </li>
+    </>
+  ))}
+</ul>
