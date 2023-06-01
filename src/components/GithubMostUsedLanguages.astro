@@ -1,82 +1,25 @@
 ---
-const response = await fetch("https://api.github.com/graphql",
-  {
-    method:'POST',
-    headers: {
-      'Accept': 'application/json',
-      'Content-Type': 'application/json',
-      'Authorization': `token ${import.meta.env.GITHUB_ACCESS_TOKEN}`,
-    },
-    body: JSON.stringify({
-      query: `
-        query($username:String!) {
-          user(login: $username){
-            repositories(first: 100, isFork: false, orderBy: {field: UPDATED_AT, direction: DESC}) {
-              nodes {
-                languages(first: 100, orderBy: {field: SIZE, direction: DESC}) {
-                  edges {
-                    size
-                    node {
-                      name
-                      color
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      `,
-      variables: {
-        username: import.meta.env.GITHUB_USERNAME
-      }
-    }),
-  })
+import { mostUsedLanguages } from '../data/mostUsedLanguages.ts'
 
-const data = await response.json()
-
-const languages = data.data.user.repositories.nodes.reduce((acc, node) => {
-  node.languages.edges.forEach((edge) => {
-    const languageName = edge.node.name
-    const languageSize = edge.size
-    const languageColor = edge.node.color
-    const language = acc.find((language) => language.name === languageName)
-    if (language) {
-      language.totalSize += languageSize
-    } else {
-      acc.push({
-        name: languageName,
-        totalSize: languageSize,
-        color: languageColor
-      })
-    }
-  })
-  return acc
-}, [])
-
-languages.sort((a, b) => {
-  return b.totalSize - a.totalSize
-})
-
-const primaryLanguageTotalSize = languages[0].totalSize
+const primaryLanguageTotalSize = mostUsedLanguages[0].totalSize
 ---
 
 <table>
   <tbody>
-    {languages.slice(0, 8).map((language) => (
+    {mostUsedLanguages.slice(0, 8).map((language) => (
       <tr class="h-4">
         <td class="pr-2 text-xs font-semibold">
           {language.name}
         </td>
         <td class="w-full">
           <div
-            class="h-2.5 rounded-full flex items-center relative group"
+            class="most-used-language-bar h-2.5 rounded-full flex items-center relative group"
             style={{
               width: `${language.totalSize / primaryLanguageTotalSize * 100}%`,
               backgroundColor: language.color,
             }}
           >
-            <span class="opacity-0 invisible absolute left-1/2 -translate-x-1/2 top-[-45px] inline-block whitespace-nowrap z-10 pointer-events-none rounded-md px-[0.875rem] py-[0.5625rem] bg-black text-white dark:bg-gray-500 dark:text-gray-300 text-xs group-hover:opacity-100 group-hover:visible before:content-[''] before:absolute before:bottom-[-13px] before:left-1/2 before:ml-[-7px] before:z-10 before:pointer-events-none before:border-[7px] before:border-x-transparent before:border-b-transparent before:dark:border-x-transparent before:dark:border-b-transparent before:border-black before:dark:border-gray-500">
+            <span class="most-used-language-tooltip opacity-0 invisible absolute -translate-x-1/2 top-[-45px] inline-block whitespace-nowrap z-10 pointer-events-none rounded-md px-[0.875rem] py-[0.5625rem] bg-black text-white dark:bg-gray-500 dark:text-gray-300 text-xs group-hover:opacity-100 group-hover:visible before:content-[''] before:absolute before:bottom-[-13px] before:left-1/2 before:ml-[-7px] before:z-10 before:pointer-events-none before:border-[7px] before:border-x-transparent before:border-b-transparent before:dark:border-x-transparent before:dark:border-b-transparent before:border-black before:dark:border-gray-500">
               {language.totalSize.toLocaleString()} bytes
             </span>
           </div>
@@ -85,3 +28,14 @@ const primaryLanguageTotalSize = languages[0].totalSize
     ))}
   </tbody>
 </table>
+
+<script>
+  const bars = document.querySelectorAll('.most-used-language-bar')
+  bars.forEach((bar) => {
+    bar.addEventListener('mousemove', (event) => {
+      const rect = bar.getBoundingClientRect()
+      const mouseLeft = (event.clientX - rect.left) / rect.width * 100
+      bar.querySelector('.most-used-language-tooltip').style.left = `${mouseLeft}%`
+    })
+  })
+</script>
