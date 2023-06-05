@@ -70,6 +70,7 @@ Additionally, users have the option to log in using their GitHub accounts and cr
             "React Hook Form",
             "Zod",
             "Markdoc",
+            "Vercel",
           ],
         },
         {
@@ -91,6 +92,8 @@ On this platform, users can easily register their own products for sale, and can
             "Fiber",
             "sqlc",
             "Swagger",
+            "Vercel",
+            "Render",
           ],
         },
         {
@@ -107,6 +110,8 @@ On this platform, users can easily register their own products for sale, and can
             "FastAPI",
             "Music Transformer",
             "Recital (my library)",
+            "Vercel",
+            "Cloud Run",
           ],
         },
         {
@@ -175,6 +180,7 @@ Reactを使用したフロントエンド開発を得意としており、仕事
             "React Hook Form",
             "Zod",
             "Markdoc",
+            "Vercel",
           ],
         },
         {
@@ -196,6 +202,8 @@ Reactを使用したフロントエンド開発を得意としており、仕事
             "Fiber",
             "sqlc",
             "Swagger",
+            "Vercel",
+            "Render",
           ],
         },
         {
@@ -212,6 +220,8 @@ Reactを使用したフロントエンド開発を得意としており、仕事
             "FastAPI",
             "Music Transformer",
             "Recital (my library)",
+            "Vercel",
+            "Cloud Run",
           ],
         },
         {
