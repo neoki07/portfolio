@@ -7,11 +7,20 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "fetch:github-data": "ts-node --esm scripts/fetchGithubData.ts"
   },
   "dependencies": {
     "@astrojs/tailwind": "^3.1.1",
     "astro": "^2.1.7",
+    "dotenv": "^16.1.4",
     "tailwindcss": "^3.0.24"
+  },
+  "devDependencies": {
+    "@types/node": "^20.2.5",
+    "@types/prettier": "^2.7.3",
+    "prettier": "^2.8.8",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.3"
   }
 }
