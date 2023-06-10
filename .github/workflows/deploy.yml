@@ -20,8 +20,8 @@ jobs:
           GITHUB_ACCESS_TOKEN: ${{ secrets._GITHUB_ACCESS_TOKEN }}
       - name: git setting
         run: |
-          git config --local user.name "ot07"
-          git config --local user.email "ot07neoki@gmail.com"
+          git config --local user.name "GitHub Action"
+          git config --local user.email "action@github.com"
           git add src/data
           git commit -m "update github data"
           git pull
