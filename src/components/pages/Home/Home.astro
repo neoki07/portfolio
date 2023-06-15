@@ -26,9 +26,13 @@ const t = useTranslations(lang);
       <p class="flex items-center">
         {t.intro.greeting}<span class="text-2xl ml-1">👋</span>
       </p>
-      <p>
-        <EmbedMyname text={t.intro.paragraph} />
-      </p>
+      {
+        t.intro.paragraphs.map((paragraph) => (
+          <p>
+            <EmbedMyname text={paragraph} />
+          </p>
+        ))
+      }
     </div>
     
     <hr class="border-gray-200 dark:border-gray-800"/>
