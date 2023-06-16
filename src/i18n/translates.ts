@@ -66,9 +66,7 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
           name: "[WIP] Myposts",
           repoUrl: "https://github.com/ot07/myposts",
           demoUrl: "https://myposts-hazel.vercel.app",
-          description: `This website is a platform dedicated to sharing posts in Markdown format.
-Users can explore posts created by others without the need for logging in.
-Additionally, users have the option to log in using their GitHub accounts and create their own posts on the site.`,
+          description: "A platform where you can view and share posts in Markdown format",
           technologies: [
             "TypeScript",
             "React",
@@ -86,8 +84,7 @@ Additionally, users have the option to log in using their GitHub accounts and cr
           name: "[WIP] Next Bazaar",
           repoUrl: "https://github.com/ot07/next-bazaar",
           demoUrl: "https://next-bazaar.vercel.app",
-          description: `This website is a user-friendly online bazaar website where users can buy and sell products.
-On this platform, users can easily register their own products for sale, and can browse through a wide range of product categories.`,
+          description: "An online shopping website for buying and selling products",
           technologies: [
             "TypeScript",
             "React",
@@ -109,7 +106,7 @@ On this platform, users can easily register their own products for sale, and can
           name: "Music Transformer Playground",
           repoUrl: "https://github.com/ot07/music-transformer-playground",
           demoUrl: "https://music-transformer-playground.vercel.app",
-          description: `This website is a playground where you can easily generate piano performances using an AI called Music Transformer.`,
+          description: "A playground to generate piano performances easily using AI called Music Transformer",
           technologies: [
             "TypeScript",
             "React",
@@ -126,7 +123,7 @@ On this platform, users can easily register their own products for sale, and can
         {
           name: "Recital",
           repoUrl: "https://github.com/resonance-box/recital",
-          description: `A musical tools for the browser.`,
+          description: `A musical tools for the browser`,
           technologies: [
             "TypeScript",
             "React",
@@ -139,7 +136,7 @@ On this platform, users can easily register their own products for sale, and can
         {
           name: "sf2-synth-audio-worklet",
           repoUrl: "https://github.com/resonance-box/sf2-synth-audio-worklet",
-          description: `An Audio Worklet-based SoundFont2 synthesizer.`,
+          description: `An Audio Worklet-based SoundFont2 synthesizer`,
           technologies: [
             "TypeScript",
             "Vite",
@@ -184,9 +181,7 @@ Web開発においては、モダンなプログラミング言語やフレー�
           name: "[WIP] Myposts",
           repoUrl: "https://github.com/ot07/myposts",
           demoUrl: "https://myposts-hazel.vercel.app",
-          description: `このWebサイトは、Markdown形式の記事を共有するためのプラットフォームです。
-ユーザーはログインする必要なく、他のユーザーが作成した記事を閲覧することができます。
-さらに、ユーザーはGitHubアカウントを使用してログインし、サイト上に記事を作成することもできます。`,
+          description: "Markdown形式の記事を閲覧・共有することができるプラットフォーム",
           technologies: [
             "TypeScript",
             "React",
@@ -204,8 +199,7 @@ Web開発においては、モダンなプログラミング言語やフレー�
           name: "[WIP] Next Bazaar",
           repoUrl: "https://github.com/ot07/next-bazaar",
           demoUrl: "https://next-bazaar.vercel.app",
-          description: `このWebサイトは、ユーザーフレンドリーなオンラインのショッピングサイトで、ユーザーは商品の売買ができます。
-このプラットフォームでは、ユーザーは簡単に自分の商品を登録することができますし、さまざまな商品カテゴリーを閲覧することもできます。`,
+          description: "商品の売買ができるオンラインショッピングサイト",
           technologies: [
             "TypeScript",
             "React",
@@ -227,7 +221,7 @@ Web開発においては、モダンなプログラミング言語やフレー�
           name: "Music Transformer Playground",
           repoUrl: "https://github.com/ot07/music-transformer-playground",
           demoUrl: "https://music-transformer-playground.vercel.app",
-          description: `このWebサイトは、Music Transformerと呼ばれるAIを使って、簡単にピアノの演奏を生成することができるプレイグラウンドです。`,
+          description: "Music Transformerと呼ばれるAIを使って、簡単にピアノの演奏を生成することができるプレイグラウンド",
           technologies: [
             "TypeScript",
             "React",
@@ -244,7 +238,7 @@ Web開発においては、モダンなプログラミング言語やフレー�
         {
           name: "Recital",
           repoUrl: "https://github.com/resonance-box/recital",
-          description: `ブラウザ向けの音楽ツールです。`,
+          description: `ブラウザ向けの音楽ツール`,
           technologies: [
             "TypeScript",
             "React",
@@ -257,7 +251,7 @@ Web開発においては、モダンなプログラミング言語やフレー�
         {
           name: "sf2-synth-audio-worklet",
           repoUrl: "https://github.com/resonance-box/sf2-synth-audio-worklet",
-          description: `Audio Workletを利用したSoundFont2シンセサイザーです。`,
+          description: `Audio Workletを利用したSoundFont2シンセサイザー`,
           technologies: [
             "TypeScript",
             "Vite",
