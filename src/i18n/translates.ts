@@ -12,10 +12,12 @@ type Translates = {
   },
   skills: {
     title: string;
-    languages: string;
-    frameworks: string;
-    libraries: string;
-    mostUsedLanguages: string;
+    languagesLabel: string;
+    frameworksLabel: string;
+    librariesLabel: string;
+    languages: string[];
+    frameworksAndLibraries: string[];
+    mostUsedLanguagesLabel: string;
   },
   projects: {
     title: string;
@@ -54,10 +56,34 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
     },
     skills: {
       title: 'Skills',
-      languages: 'Languages',
-      frameworks: 'Frameworks',
-      libraries: 'Libraries',
-      mostUsedLanguages: 'Most Used Languages',
+      languagesLabel: 'Languages',
+      frameworksLabel: 'Frameworks',
+      librariesLabel: 'Libraries',
+      languages: [
+        "TypeScript",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Go",
+        "Rust",
+        "Python",
+        "PHP",
+      ],
+      frameworksAndLibraries: [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Tanstack Query",
+        "Storybook",
+        "Swagger",
+        "Astro",
+        "Redux",
+        "Jest",
+        "Docker",
+        "Laravel",
+        "Ansible",
+      ],
+      mostUsedLanguagesLabel: 'Most Used Languages',
     },
     projects: {
       title: 'Projects',
@@ -169,10 +195,34 @@ Web開発においては、モダンなプログラミング言語やフレー�
     },
     skills: {
       title: 'スキル',
-      languages: '言語',
-      frameworks: 'フレームワーク',
-      libraries: 'ライブラリ',
-      mostUsedLanguages: 'よく使用している言語',
+      languagesLabel: '言語',
+      frameworksLabel: 'フレームワーク',
+      librariesLabel: 'ライブラリ',
+      languages: [
+        "TypeScript",
+        "JavaScript",
+        "HTML",
+        "CSS",
+        "Go",
+        "Rust",
+        "Python",
+        "PHP",
+      ],
+      frameworksAndLibraries: [
+        "React",
+        "Next.js",
+        "Tailwind CSS",
+        "Tanstack Query",
+        "Storybook",
+        "Swagger",
+        "Astro",
+        "Redux",
+        "Jest",
+        "Docker",
+        "Laravel",
+        "Ansible",
+      ],
+      mostUsedLanguagesLabel: 'よく使用している言語',
     },
     projects: {
       title: 'プロジェクト',
