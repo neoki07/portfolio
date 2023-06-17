@@ -40,7 +40,7 @@ const t = useTranslations(lang);
     <div class="mt-8 space-y-8">
       <div>
         <h3 class="font-semibold text-gray-700 dark:text-gray-300">{t.skills.languagesLabel}</h3>
-        <ul class="mt-2 flex flex-wrap gap-1.5">
+        <ul class="mt-4 flex flex-wrap gap-1.5">
           {
             t.skills.languages.map((skill) => (
               <li class="">
@@ -54,7 +54,7 @@ const t = useTranslations(lang);
       </div>
       <div>
         <h3 class="font-semibold text-gray-700 dark:text-gray-300">{t.skills.frameworksLabel} & {t.skills.librariesLabel}</h3>
-        <ul class="mt-2 flex flex-wrap gap-1.5">
+        <ul class="mt-4 flex flex-wrap gap-1.5">
           {
             t.skills.frameworksAndLibraries.map((skill) => (
               <li>
@@ -70,7 +70,7 @@ const t = useTranslations(lang);
         <h3 class="font-semibold text-gray-700 dark:text-gray-300">
           {t.skills.mostUsedLanguagesLabel}
         </h3>
-        <div class="mt-2">
+        <div class="mt-4">
           <GithubMostUsedLanguages />
         </div>
       </div>
