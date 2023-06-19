@@ -1,9 +1,9 @@
 export const mostUsedLanguages = [
-  { name: "TypeScript", totalSize: 609815, color: "#3178c6" },
+  { name: "TypeScript", totalSize: 619219, color: "#3178c6" },
   { name: "Rust", totalSize: 316542, color: "#dea584" },
   { name: "Go", totalSize: 214185, color: "#00ADD8" },
   { name: "Python", totalSize: 209732, color: "#3572A5" },
-  { name: "JavaScript", totalSize: 91363, color: "#f1e05a" },
+  { name: "JavaScript", totalSize: 91488, color: "#f1e05a" },
   { name: "CSS", totalSize: 68295, color: "#563d7c" },
   { name: "Astro", totalSize: 54457, color: "#ff5a03" },
   { name: "C", totalSize: 38881, color: "#555555" },
