@@ -91,7 +91,7 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
         {
           name: "[WIP] Myposts",
           repoUrl: "https://github.com/ot07/myposts",
-          demoUrl: "https://myposts-hazel.vercel.app",
+          demoUrl: "https://myposts-dev.vercel.app",
           description: "A platform where you can view and share posts in Markdown format",
           technologies: [
             "TypeScript",
@@ -230,7 +230,7 @@ Web開発においては、モダンなプログラミング言語やフレー�
         {
           name: "[WIP] Myposts",
           repoUrl: "https://github.com/ot07/myposts",
-          demoUrl: "https://myposts-hazel.vercel.app",
+          demoUrl: "https://myposts-dev.vercel.app",
           description: "Markdown形式の記事を閲覧・共有することができるプラットフォーム",
           technologies: [
             "TypeScript",
