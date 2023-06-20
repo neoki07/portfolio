@@ -1,15 +1,15 @@
 ---
-import Layout from "../../../layouts/Layout.astro";
-import Profile from "../../Profile.astro";
-import AnchorText from "../../AnchorText.astro";
-import Badge from "../../Badge.astro";
-import GithubIcon from "../../GithubIcon.astro";
-import ExternalLinkIcon from "../../ExternalLinkIcon.astro";
-import GithubContributionGraph from "../../GithubContributionGraph.astro";
-import GithubMostUsedLanguages from "../../GithubMostUsedLanguages.astro";
-import EmbedMyname from "../../EmbedMyname.astro";
+import Layout from '../../../layouts/Layout.astro';
+import Profile from '../../Profile.astro';
+import AnchorText from '../../AnchorText.astro';
+import Badge from '../../Badge.astro';
+import GithubIcon from '../../GithubIcon.astro';
+import ExternalLinkIcon from '../../ExternalLinkIcon.astro';
+import GithubContributionGraph from '../../GithubContributionGraph.astro';
+import GithubMostUsedLanguages from '../../GithubMostUsedLanguages.astro';
+import EmbedMyname from '../../EmbedMyname.astro';
 import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
-import { MYNAME } from '../../../constants/myname'
+import { MYNAME } from '../../../constants/myname';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -21,7 +21,7 @@ const t = useTranslations(lang);
       <Profile />
       <GithubContributionGraph />
     </div>
-    <hr class="border-gray-200 dark:border-gray-800"/>
+    <hr class="border-gray-200 dark:border-gray-800" />
     <div class="space-y-5 text-gray-700 dark:text-gray-400">
       <p class="flex items-center">
         {t.intro.greeting}<span class="text-2xl ml-1">👋</span>
@@ -34,33 +34,33 @@ const t = useTranslations(lang);
         ))
       }
     </div>
-    
-    <hr class="border-gray-200 dark:border-gray-800"/>
+
+    <hr class="border-gray-200 dark:border-gray-800" />
     <h1 class="text-4xl dark:text-white">{t.skills.title}</h1>
     <div class="mt-8 space-y-8">
       <div>
-        <h3 class="font-semibold text-gray-700 dark:text-gray-300">{t.skills.languagesLabel}</h3>
+        <h3 class="font-semibold text-gray-700 dark:text-gray-300">
+          {t.skills.languagesLabel}
+        </h3>
         <ul class="mt-4 flex flex-wrap gap-1.5">
           {
             t.skills.languages.map((skill) => (
               <li class="">
-                <Badge>
-                  {skill}
-                </Badge>
+                <Badge>{skill}</Badge>
               </li>
             ))
           }
         </ul>
       </div>
       <div>
-        <h3 class="font-semibold text-gray-700 dark:text-gray-300">{t.skills.frameworksLabel} & {t.skills.librariesLabel}</h3>
+        <h3 class="font-semibold text-gray-700 dark:text-gray-300">
+          {t.skills.frameworksLabel} & {t.skills.librariesLabel}
+        </h3>
         <ul class="mt-4 flex flex-wrap gap-1.5">
           {
             t.skills.frameworksAndLibraries.map((skill) => (
               <li>
-                <Badge>
-                  {skill}
-                </Badge>
+                <Badge>{skill}</Badge>
               </li>
             ))
           }
@@ -76,9 +76,9 @@ const t = useTranslations(lang);
       </div>
     </div>
 
-    <hr class="border-gray-200 dark:border-gray-800"/>
+    <hr class="border-gray-200 dark:border-gray-800" />
     <h1 class="text-4xl dark:text-white">{t.projects.title}</h1>
-    
+
     <div class="mt-8 space-y-4">
       {
         t.projects.projects.map((project) => (
@@ -89,49 +89,55 @@ const t = useTranslations(lang);
               </h3>
 
               <div class="text-gray-400 dark:text-gray-500 child:dark:hover:text-gray-400">
-                <a href={project.repoUrl} target="_blank" class="hover:text-gray-500 dark:hover:text-gray-400">
+                <a
+                  href={project.repoUrl}
+                  target="_blank"
+                  class="hover:text-gray-500 dark:hover:text-gray-400"
+                >
                   <GithubIcon />
                 </a>
               </div>
-              
-              {project.demoUrl &&
+
+              {project.demoUrl && (
                 <div class="text-gray-400 dark:text-gray-500 child:dark:hover:text-gray-400">
-                  <a href={project.demoUrl} target="_blank" class="hover:text-gray-500 dark:hover:text-gray-400">
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    class="hover:text-gray-500 dark:hover:text-gray-400"
+                  >
                     <ExternalLinkIcon />
                   </a>
                 </div>
-              }
+              )}
             </div>
 
-            <p class="mt-2 text-sm leading-normal">
-              {project.description}
-            </p>
+            <p class="mt-2 text-sm leading-normal">{project.description}</p>
 
             <ul class="mt-4 flex flex-wrap gap-1.5">
-              {
-                project.technologies.map((skill) => (
-                  <li>
-                    <Badge>
-                      {skill}
-                    </Badge>
-                  </li>
-                ))
-              }
+              {project.technologies.map((skill) => (
+                <li>
+                  <Badge>{skill}</Badge>
+                </li>
+              ))}
             </ul>
           </div>
         ))
       }
     </div>
-    
-    <hr class="border-gray-200 dark:border-gray-800"/>
+
+    <hr class="border-gray-200 dark:border-gray-800" />
     <h1 class="text-4xl dark:text-white">{t.ossContributions.title}</h1>
     <div class="mt-8 space-y-8">
       <div>
         <h3 class="font-semibold text-gray-700 dark:text-gray-300">Prettier</h3>
         <ul class="list-disc mt-2 [&>li]:ml-8">
           <li>
-            <AnchorText href="https://github.com/prettier/prettier/pull/14830" target="_blank">
-              TypeScript: Fix issue with double semicolon caused by // prettier-ignore on a call signature line (#14830)
+            <AnchorText
+              href="https://github.com/prettier/prettier/pull/14830"
+              target="_blank"
+            >
+              TypeScript: Fix issue with double semicolon caused by //
+              prettier-ignore on a call signature line (#14830)
             </AnchorText>
           </li>
         </ul>
@@ -140,8 +146,13 @@ const t = useTranslations(lang);
         <h3 class="font-semibold text-gray-700 dark:text-gray-300">Mantine</h3>
         <ul class="list-disc mt-2 [&>li]:ml-8">
           <li>
-            <AnchorText href="https://github.com/mantinedev/mantine/pull/4281" target="_blank">
-              [@mantine/core] AppShell: Fix wrong padding when navbarOffsetBreakpoint and asideOffsetBreakpoint have the same value (#4281)
+            <AnchorText
+              href="https://github.com/mantinedev/mantine/pull/4281"
+              target="_blank"
+            >
+              [@mantine/core] AppShell: Fix wrong padding when
+              navbarOffsetBreakpoint and asideOffsetBreakpoint have the same
+              value (#4281)
             </AnchorText>
           </li>
         </ul>

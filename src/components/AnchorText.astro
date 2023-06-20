@@ -1,8 +1,11 @@
 ---
-import type { HTMLAttributes } from 'astro/types'
+import type { HTMLAttributes } from 'astro/types';
 
 interface Props extends HTMLAttributes<'a'> {}
 const props = Astro.props;
 ---
 
-<a class="border-b text-gray-900 border-gray-300 hover:border-gray-500 dark:text-gray-100 dark:border-gray-600 dark:hover:border-gray-400" {...props}><slot /></a>
+<a
+  class="border-b text-gray-900 border-gray-300 hover:border-gray-500 dark:text-gray-100 dark:border-gray-600 dark:hover:border-gray-400"
+  {...props}><slot /></a
+>

@@ -8,13 +8,14 @@ function splitTextWithMyname(text) {
   return text.split(regex);
 }
 
-const { text } = Astro.props
+const { text } = Astro.props;
 const splitTexts = splitTextWithMyname(text);
 ---
+
 <>
   {
-    splitTexts.map((text) => (
+    splitTexts.map((text) =>
       text === mynameTag ? <strong>{MYNAME}</strong> : <>{text}</>
-    ))
+    )
   }
-</strong>
+</>

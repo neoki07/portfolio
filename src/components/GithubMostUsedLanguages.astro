@@ -1,41 +1,45 @@
 ---
-import { mostUsedLanguages } from '../data/mostUsedLanguages.ts'
+import { mostUsedLanguages } from '../data/mostUsedLanguages.ts';
 
-const primaryLanguageTotalSize = mostUsedLanguages[0].totalSize
+const primaryLanguageTotalSize = mostUsedLanguages[0].totalSize;
 ---
 
 <table>
   <tbody>
-    {mostUsedLanguages.slice(0, 8).map((language) => (
-      <tr class="h-4">
-        <td class="pr-2 text-xs text-right">
-          {language.name}
-        </td>
-        <td class="w-full">
-          <div
-            class="most-used-language-bar h-2.5 rounded-full flex items-center relative group"
-            style={{
-              width: `${language.totalSize / primaryLanguageTotalSize * 100}%`,
-              backgroundColor: language.color,
-            }}
-          >
-            <span class="most-used-language-tooltip opacity-0 invisible absolute -translate-x-1/2 top-[-45px] inline-block whitespace-nowrap z-10 pointer-events-none rounded-md px-[0.875rem] py-[0.5625rem] bg-black text-white dark:bg-gray-500 dark:text-gray-300 text-xs group-hover:opacity-100 group-hover:visible before:content-[''] before:absolute before:bottom-[-13px] before:left-1/2 before:ml-[-7px] before:z-10 before:pointer-events-none before:border-[7px] before:border-x-transparent before:border-b-transparent before:dark:border-x-transparent before:dark:border-b-transparent before:border-black before:dark:border-gray-500">
-              {language.totalSize.toLocaleString()} bytes
-            </span>
-          </div>
-        </td>
-      </tr>
-    ))}
+    {
+      mostUsedLanguages.slice(0, 8).map((language) => (
+        <tr class="h-4">
+          <td class="pr-2 text-xs text-right">{language.name}</td>
+          <td class="w-full">
+            <div
+              class="most-used-language-bar h-2.5 rounded-full flex items-center relative group"
+              style={{
+                width: `${
+                  (language.totalSize / primaryLanguageTotalSize) * 100
+                }%`,
+                backgroundColor: language.color,
+              }}
+            >
+              <span class="most-used-language-tooltip opacity-0 invisible absolute -translate-x-1/2 top-[-45px] inline-block whitespace-nowrap z-10 pointer-events-none rounded-md px-[0.875rem] py-[0.5625rem] bg-black text-white dark:bg-gray-500 dark:text-gray-300 text-xs group-hover:opacity-100 group-hover:visible before:content-[''] before:absolute before:bottom-[-13px] before:left-1/2 before:ml-[-7px] before:z-10 before:pointer-events-none before:border-[7px] before:border-x-transparent before:border-b-transparent before:dark:border-x-transparent before:dark:border-b-transparent before:border-black before:dark:border-gray-500">
+                {language.totalSize.toLocaleString()} bytes
+              </span>
+            </div>
+          </td>
+        </tr>
+      ))
+    }
   </tbody>
 </table>
 
 <script>
-  const bars = document.querySelectorAll('.most-used-language-bar')
+  const bars = document.querySelectorAll('.most-used-language-bar');
   bars.forEach((bar) => {
     bar.addEventListener('mousemove', (event) => {
-      const rect = bar.getBoundingClientRect()
-      const mouseLeft = (event.clientX - rect.left) / rect.width * 100
-      bar.querySelector('.most-used-language-tooltip').style.left = `${mouseLeft}%`
-    })
-  })
+      const rect = bar.getBoundingClientRect();
+      const mouseLeft = ((event.clientX - rect.left) / rect.width) * 100;
+      bar.querySelector(
+        '.most-used-language-tooltip'
+      ).style.left = `${mouseLeft}%`;
+    });
+  });
 </script>
