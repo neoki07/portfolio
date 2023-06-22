@@ -8,8 +8,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "format": "prettier --write .",
-    "format:check": "prettier --check .",
+    "format": "prettier --write --plugin-search-dir=. .",
+    "format:check": "prettier --check --plugin-search-dir=. .",
     "fetch:github-data": "ts-node --esm scripts/fetchGithubData.ts"
   },
   "dependencies": {
