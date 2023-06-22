@@ -85,10 +85,10 @@ const projectCategories: ProjectCategory[] = [
     <hr class="border-gray-200 dark:border-gray-800" />
     <H1>{t.projects.title}</H1>
 
-    <div class="mt-8 space-y-4">
+    <div class="mt-8 space-y-8">
       {
         projectCategories.map((category) => (
-          <>
+          <div class="space-y-4">
             <H2>{category}</H2>
             {groupedProjects[category]?.map((project) => (
               <div class="border p-6 rounded-lg dark:border-gray-800">
@@ -129,7 +129,7 @@ const projectCategories: ProjectCategory[] = [
                 </ul>
               </div>
             ))}
-          </>
+          </div>
         ))
       }
     </div>
