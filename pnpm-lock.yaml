@@ -14,6 +14,9 @@ dependencies:
   dotenv:
     specifier: ^16.1.4
     version: 16.1.4
+  radash:
+    specifier: ^10.9.0
+    version: 10.9.0
   tailwindcss:
     specifier: ^3.0.24
     version: 3.2.7(postcss@8.4.21)(ts-node@10.9.1)
@@ -2586,6 +2589,11 @@ packages:
   /quick-lru@5.1.1:
     resolution: {integrity: sha512-WuyALRjWPDGtt/wzJiadO5AXY+8hZ80hVpe6MyivgraREW751X3SbhRvG3eLKOYN+8VEvqLcf3wdnt44Z4S4SA==}
     engines: {node: '>=10'}
+    dev: false
+
+  /radash@10.9.0:
+    resolution: {integrity: sha512-0pijGuxnF5CgEdRwrCEHjx4onaXWpmVligyKzfn7hIjpOl11n+9x8le6R3gFjAs2e6d7WT39vcZw1AWHt3w9Jw==}
+    engines: {node: '>=14.18.0'}
     dev: false
 
   /read-cache@1.0.0:

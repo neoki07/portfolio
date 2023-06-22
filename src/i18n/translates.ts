@@ -5,6 +5,8 @@ export const languages = {
 
 export const defaultLang = 'en';
 
+export type ProjectCategory = 'Websites' | 'JavaScript Libraries' | 'CLI Tools';
+
 type Translates = {
   intro: {
     greeting: string;
@@ -27,6 +29,7 @@ type Translates = {
       demoUrl?: string;
       description: string;
       technologies: string[];
+      category: ProjectCategory;
     }>;
   };
   ossContributions: {
@@ -106,6 +109,7 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
             'Markdoc',
             'Vercel',
           ],
+          category: 'Websites',
         },
         {
           name: '[WIP] Next Bazaar',
@@ -129,6 +133,7 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
             'Vercel',
             'Render',
           ],
+          category: 'Websites',
         },
         {
           name: 'Music Transformer Playground',
@@ -148,6 +153,7 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
             'Vercel',
             'Cloud Run',
           ],
+          category: 'Websites',
         },
         {
           name: 'Recital',
@@ -161,6 +167,7 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
             'Immer',
             'sf2-synth-audio-worklet (my library)',
           ],
+          category: 'JavaScript Libraries',
         },
         {
           name: 'sf2-synth-audio-worklet',
@@ -175,6 +182,7 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
             'WebAssembly',
             'SoundFont2',
           ],
+          category: 'JavaScript Libraries',
         },
       ],
     },
@@ -248,6 +256,7 @@ Web開発においては、モダンなプログラミング言語やフレー�
             'Markdoc',
             'Vercel',
           ],
+          category: 'Websites',
         },
         {
           name: '[WIP] Next Bazaar',
@@ -270,6 +279,7 @@ Web開発においては、モダンなプログラミング言語やフレー�
             'Vercel',
             'Render',
           ],
+          category: 'Websites',
         },
         {
           name: 'Music Transformer Playground',
@@ -289,6 +299,7 @@ Web開発においては、モダンなプログラミング言語やフレー�
             'Vercel',
             'Cloud Run',
           ],
+          category: 'Websites',
         },
         {
           name: 'Recital',
@@ -302,6 +313,7 @@ Web開発においては、モダンなプログラミング言語やフレー�
             'Immer',
             'sf2-synth-audio-worklet (my library)',
           ],
+          category: 'JavaScript Libraries',
         },
         {
           name: 'sf2-synth-audio-worklet',
@@ -316,6 +328,7 @@ Web開発においては、モダンなプログラミング言語やフレー�
             'WebAssembly',
             'SoundFont2',
           ],
+          category: 'JavaScript Libraries',
         },
       ],
     },

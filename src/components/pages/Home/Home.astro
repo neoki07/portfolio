@@ -11,10 +11,18 @@ import EmbedMyname from '../../EmbedMyname.astro';
 import H1 from '../../H1.astro';
 import H2 from '../../H2.astro';
 import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+import type { ProjectCategory } from '../../../i18n/translates';
 import { MYNAME } from '../../../constants/myname';
+import { group } from 'radash';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
+
+const groupedProjects = group(t.projects.projects, (p) => p.category);
+const projectCategories: ProjectCategory[] = [
+  'Websites',
+  'JavaScript Libraries',
+];
 ---
 
 <Layout title={`${MYNAME}'s portfolio`}>
@@ -73,54 +81,59 @@ const t = useTranslations(lang);
     </div>
 
     <hr class="border-gray-200 dark:border-gray-800" />
-    <H1 class="text-4xl dark:text-white">{t.projects.title}</H1>
+    <H1>{t.projects.title}</H1>
 
     <div class="mt-8 space-y-4">
       {
-        t.projects.projects.map((project) => (
-          <div class="border p-6 rounded-lg dark:border-gray-800">
-            <div class="flex items-center space-x-2">
-              <H2>{project.name}</H2>
+        projectCategories.map((category) => (
+          <>
+            <H2>{category}</H2>
+            {groupedProjects[category]?.map((project) => (
+              <div class="border p-6 rounded-lg dark:border-gray-800">
+                <div class="flex items-center space-x-2">
+                  <H2>{project.name}</H2>
 
-              <div class="text-gray-400 dark:text-gray-500 child:dark:hover:text-gray-400">
-                <a
-                  href={project.repoUrl}
-                  target="_blank"
-                  class="hover:text-gray-500 dark:hover:text-gray-400"
-                >
-                  <GithubIcon />
-                </a>
-              </div>
+                  <div class="text-gray-400 dark:text-gray-500 child:dark:hover:text-gray-400">
+                    <a
+                      href={project.repoUrl}
+                      target="_blank"
+                      class="hover:text-gray-500 dark:hover:text-gray-400"
+                    >
+                      <GithubIcon />
+                    </a>
+                  </div>
 
-              {project.demoUrl && (
-                <div class="text-gray-400 dark:text-gray-500 child:dark:hover:text-gray-400">
-                  <a
-                    href={project.demoUrl}
-                    target="_blank"
-                    class="hover:text-gray-500 dark:hover:text-gray-400"
-                  >
-                    <ExternalLinkIcon />
-                  </a>
+                  {project.demoUrl && (
+                    <div class="text-gray-400 dark:text-gray-500 child:dark:hover:text-gray-400">
+                      <a
+                        href={project.demoUrl}
+                        target="_blank"
+                        class="hover:text-gray-500 dark:hover:text-gray-400"
+                      >
+                        <ExternalLinkIcon />
+                      </a>
+                    </div>
+                  )}
                 </div>
-              )}
-            </div>
 
-            <p class="mt-2 text-sm leading-normal">{project.description}</p>
+                <p class="mt-2 text-sm leading-normal">{project.description}</p>
 
-            <ul class="mt-4 flex flex-wrap gap-1.5">
-              {project.technologies.map((skill) => (
-                <li>
-                  <Badge>{skill}</Badge>
-                </li>
-              ))}
-            </ul>
-          </div>
+                <ul class="mt-4 flex flex-wrap gap-1.5">
+                  {project.technologies.map((skill) => (
+                    <li>
+                      <Badge>{skill}</Badge>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </>
         ))
       }
     </div>
 
     <hr class="border-gray-200 dark:border-gray-800" />
-    <H1 class="text-4xl dark:text-white">{t.ossContributions.title}</H1>
+    <H1>{t.ossContributions.title}</H1>
     <div class="mt-8 space-y-8">
       <div>
         <H2>Prettier</H2>
