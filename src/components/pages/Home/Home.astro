@@ -9,6 +9,7 @@ import GithubContributionGraph from '../../GithubContributionGraph.astro';
 import GithubMostUsedLanguages from '../../GithubMostUsedLanguages.astro';
 import EmbedMyname from '../../EmbedMyname.astro';
 import H1 from '../../H1.astro';
+import H2 from '../../H2.astro';
 import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
 import { MYNAME } from '../../../constants/myname';
 
@@ -40,9 +41,7 @@ const t = useTranslations(lang);
     <H1>{t.skills.title}</H1>
     <div class="mt-8 space-y-8">
       <div>
-        <h3 class="font-semibold text-gray-700 dark:text-gray-300">
-          {t.skills.languagesLabel}
-        </h3>
+        <H2>{t.skills.languagesLabel}</H2>
         <ul class="mt-4 flex flex-wrap gap-1.5">
           {
             t.skills.languages.map((skill) => (
@@ -54,9 +53,7 @@ const t = useTranslations(lang);
         </ul>
       </div>
       <div>
-        <h3 class="font-semibold text-gray-700 dark:text-gray-300">
-          {t.skills.frameworksLabel} & {t.skills.librariesLabel}
-        </h3>
+        <H2>{t.skills.frameworksLabel} & {t.skills.librariesLabel}</H2>
         <ul class="mt-4 flex flex-wrap gap-1.5">
           {
             t.skills.frameworksAndLibraries.map((skill) => (
@@ -68,9 +65,7 @@ const t = useTranslations(lang);
         </ul>
       </div>
       <div>
-        <h3 class="font-semibold text-gray-700 dark:text-gray-300">
-          {t.skills.mostUsedLanguagesLabel}
-        </h3>
+        <H2>{t.skills.mostUsedLanguagesLabel}</H2>
         <div class="mt-4">
           <GithubMostUsedLanguages />
         </div>
@@ -85,9 +80,7 @@ const t = useTranslations(lang);
         t.projects.projects.map((project) => (
           <div class="border p-6 rounded-lg dark:border-gray-800">
             <div class="flex items-center space-x-2">
-              <h3 class="font-bold text-slate-700 dark:text-gray-200 text-lg">
-                {project.name}
-              </h3>
+              <H2>{project.name}</H2>
 
               <div class="text-gray-400 dark:text-gray-500 child:dark:hover:text-gray-400">
                 <a
@@ -130,7 +123,7 @@ const t = useTranslations(lang);
     <H1 class="text-4xl dark:text-white">{t.ossContributions.title}</H1>
     <div class="mt-8 space-y-8">
       <div>
-        <h3 class="font-semibold text-gray-700 dark:text-gray-300">Prettier</h3>
+        <H2>Prettier</H2>
         <ul class="list-disc mt-2 [&>li]:ml-8">
           <li>
             <AnchorText
@@ -144,7 +137,7 @@ const t = useTranslations(lang);
         </ul>
       </div>
       <div>
-        <h3 class="font-semibold text-gray-700 dark:text-gray-300">Mantine</h3>
+        <H2>Mantine</H2>
         <ul class="list-disc mt-2 [&>li]:ml-8">
           <li>
             <AnchorText
