@@ -32,14 +32,19 @@ const primaryLanguageTotalSize = mostUsedLanguages[0].totalSize;
 </table>
 
 <script>
-  const bars = document.querySelectorAll('.most-used-language-bar');
+  const bars = document.querySelectorAll<HTMLDivElement>(
+    '.most-used-language-bar'
+  );
   bars.forEach((bar) => {
     bar.addEventListener('mousemove', (event) => {
       const rect = bar.getBoundingClientRect();
       const mouseLeft = ((event.clientX - rect.left) / rect.width) * 100;
-      bar.querySelector(
+      const tooltip = bar.querySelector<HTMLSpanElement>(
         '.most-used-language-tooltip'
-      ).style.left = `${mouseLeft}%`;
+      );
+      if (tooltip !== null) {
+        tooltip.style.left = `${mouseLeft}%`;
+      }
     });
   });
 </script>
