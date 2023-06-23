@@ -1,165 +1,22 @@
 ---
 import Layout from '../../../layouts/Layout.astro';
-import Profile from '../../Profile.astro';
-import AnchorText from '../../AnchorText.astro';
-import Badge from '../../Badge.astro';
-import GithubIcon from '../../GithubIcon.astro';
-import ExternalLinkIcon from '../../ExternalLinkIcon.astro';
-import GithubContributionGraph from '../../GithubContributionGraph.astro';
-import GithubMostUsedLanguages from '../../GithubMostUsedLanguages.astro';
-import EmbedMyname from '../../EmbedMyname.astro';
-import H1 from '../../H1.astro';
-import H2 from '../../H2.astro';
-import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
-import type { ProjectCategory } from '../../../i18n/translates';
 import { MYNAME } from '../../../constants/myname';
-import groupBy from 'lodash/groupBy';
-
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
-
-const groupedProjects = groupBy(t.projects.projects, 'category');
-const projectCategories: ProjectCategory[] = [
-  'Websites',
-  'JavaScript Libraries',
-];
-
-const groupedContributions = groupBy(t.ossContributions.contributions, 'project');
+import SelfIntroduction from './SelfIntroduction.astro';
+import Skills from './Skills.astro';
+import Projects from './Projects.astro';
+import OssContributions from './OssContributions.astro';
 ---
 
 <Layout title={`${MYNAME}'s portfolio`}>
   <main
     class="m-auto p-6 max-w-3xl space-y-12 text-gray-700 dark:text-gray-400"
   >
-    <div class="space-y-4">
-      <Profile />
-      <GithubContributionGraph />
-    </div>
+    <SelfIntroduction />
     <hr class="border-gray-200 dark:border-gray-800" />
-    <div class="space-y-5 text-gray-700 dark:text-gray-400">
-      <p class="flex items-center">
-        {t.intro.greeting}<span class="text-2xl ml-1">👋</span>
-      </p>
-      {
-        t.intro.paragraphs.map((paragraph) => (
-          <p>
-            <EmbedMyname text={paragraph} />
-          </p>
-        ))
-      }
-    </div>
-
+    <Skills />
     <hr class="border-gray-200 dark:border-gray-800" />
-    <H1>{t.skills.title}</H1>
-    <div class="mt-8 space-y-8">
-      <div>
-        <H2>{t.skills.languagesLabel}</H2>
-        <ul class="mt-4 flex flex-wrap gap-1.5">
-          {
-            t.skills.languages.map((skill) => (
-              <li class="">
-                <Badge>{skill}</Badge>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-      <div>
-        <H2>{t.skills.frameworksLabel} & {t.skills.librariesLabel}</H2>
-        <ul class="mt-4 flex flex-wrap gap-1.5">
-          {
-            t.skills.frameworksAndLibraries.map((skill) => (
-              <li>
-                <Badge>{skill}</Badge>
-              </li>
-            ))
-          }
-        </ul>
-      </div>
-      <div>
-        <H2>{t.skills.mostUsedLanguagesLabel}</H2>
-        <div class="mt-4">
-          <GithubMostUsedLanguages />
-        </div>
-      </div>
-    </div>
-
+    <Projects />
     <hr class="border-gray-200 dark:border-gray-800" />
-    <H1>{t.projects.title}</H1>
-
-    <div class="mt-8 space-y-8">
-      {
-        projectCategories.map((category) => (
-          <div class="space-y-4">
-            <H2>{category}</H2>
-            {groupedProjects[category]?.map((project) => (
-              <div class="border p-6 rounded-lg dark:border-gray-800">
-                <div class="flex items-center space-x-2">
-                  <H2>{project.name}</H2>
-
-                  <div class="text-gray-400 dark:text-gray-500 child:dark:hover:text-gray-400">
-                    <a
-                      href={project.repoUrl}
-                      target="_blank"
-                      class="hover:text-gray-500 dark:hover:text-gray-400"
-                    >
-                      <GithubIcon />
-                    </a>
-                  </div>
-
-                  {project.demoUrl && (
-                    <div class="text-gray-400 dark:text-gray-500 child:dark:hover:text-gray-400">
-                      <a
-                        href={project.demoUrl}
-                        target="_blank"
-                        class="hover:text-gray-500 dark:hover:text-gray-400"
-                      >
-                        <ExternalLinkIcon />
-                      </a>
-                    </div>
-                  )}
-                </div>
-
-                <p class="mt-2 text-sm leading-normal">{project.description}</p>
-
-                <ul class="mt-4 flex flex-wrap gap-1.5">
-                  {project.technologies.map((skill) => (
-                    <li>
-                      <Badge>{skill}</Badge>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        ))
-      }
-    </div>
-
-    <hr class="border-gray-200 dark:border-gray-800" />
-    <H1>{t.ossContributions.title}</H1>
-    <div class="mt-8 space-y-8">
-      {
-        Object.entries(groupedContributions).map(([project, contributions]) => (
-          <div class="space-y-4">
-            <H2>{project}</H2>
-            <ul class="list-disc mt-2 [&>li]:ml-8">
-              {
-                contributions.map((contribution) => (
-                  <li>
-                    <AnchorText
-                      href={contribution.pr.url}
-                      target="_blank"
-                    >
-                      {contribution.pr.title}
-                    </AnchorText>
-                  </li>
-                ))
-              }
-            </ul>
-          </div>
-        ))
-      }
-    </div>
+    <OssContributions />
   </main>
 </Layout>

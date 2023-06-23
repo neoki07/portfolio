@@ -1,0 +1,70 @@
+---
+import Badge from '../../Badge.astro';
+import GithubIcon from '../../GithubIcon.astro';
+import ExternalLinkIcon from '../../ExternalLinkIcon.astro';
+import H1 from '../../H1.astro';
+import H2 from '../../H2.astro';
+import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+import type { ProjectCategory } from '../../../i18n/translates';
+import groupBy from 'lodash/groupBy';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+
+const groupedProjects = groupBy(t.projects.projects, 'category');
+const projectCategories: ProjectCategory[] = [
+  'Websites',
+  'JavaScript Libraries',
+];
+---
+
+<H1>{t.projects.title}</H1>
+
+<div class="mt-8 space-y-8">
+  {
+    projectCategories.map((category) => (
+      <div class="space-y-4">
+        <H2>{category}</H2>
+        {groupedProjects[category]?.map((project) => (
+          <div class="border p-6 rounded-lg dark:border-gray-800">
+            <div class="flex items-center space-x-2">
+              <H2>{project.name}</H2>
+
+              <div class="text-gray-400 dark:text-gray-500 child:dark:hover:text-gray-400">
+                <a
+                  href={project.repoUrl}
+                  target="_blank"
+                  class="hover:text-gray-500 dark:hover:text-gray-400"
+                >
+                  <GithubIcon />
+                </a>
+              </div>
+
+              {project.demoUrl && (
+                <div class="text-gray-400 dark:text-gray-500 child:dark:hover:text-gray-400">
+                  <a
+                    href={project.demoUrl}
+                    target="_blank"
+                    class="hover:text-gray-500 dark:hover:text-gray-400"
+                  >
+                    <ExternalLinkIcon />
+                  </a>
+                </div>
+              )}
+            </div>
+
+            <p class="mt-2 text-sm leading-normal">{project.description}</p>
+
+            <ul class="mt-4 flex flex-wrap gap-1.5">
+              {project.technologies.map((skill) => (
+                <li>
+                  <Badge>{skill}</Badge>
+                </li>
+              ))}
+            </ul>
+          </div>
+        ))}
+      </div>
+    ))
+  }
+</div>

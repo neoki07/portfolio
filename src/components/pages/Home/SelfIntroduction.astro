@@ -1,0 +1,27 @@
+---
+import Profile from '../../Profile.astro';
+import GithubContributionGraph from '../../GithubContributionGraph.astro';
+import EmbedMyname from '../../EmbedMyname.astro';
+import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+---
+
+<div class="space-y-4">
+  <Profile />
+  <GithubContributionGraph />
+</div>
+<hr class="border-gray-200 dark:border-gray-800" />
+<div class="space-y-5 text-gray-700 dark:text-gray-400">
+  <p class="flex items-center">
+    {t.intro.greeting}<span class="text-2xl ml-1">👋</span>
+  </p>
+  {
+    t.intro.paragraphs.map((paragraph) => (
+      <p>
+        <EmbedMyname text={paragraph} />
+      </p>
+    ))
+  }
+</div>
