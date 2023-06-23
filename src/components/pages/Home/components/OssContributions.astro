@@ -1,9 +1,9 @@
 ---
+import groupBy from 'lodash/groupBy';
+import { getLangFromUrl, useTranslations } from '../../../../i18n/utils';
 import AnchorText from '../../../shared/AnchorText.astro';
 import H1 from '../../../shared/H1.astro';
 import H2 from '../../../shared/H2.astro';
-import { getLangFromUrl, useTranslations } from '../../../../i18n/utils';
-import groupBy from 'lodash/groupBy';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -20,7 +20,7 @@ const groupedContributions = groupBy(
     Object.entries(groupedContributions).map(([project, contributions]) => (
       <div class="space-y-4">
         <H2>{project}</H2>
-        <ul class="list-disc mt-2 [&>li]:ml-8">
+        <ul class="mt-2 list-disc [&>li]:ml-8">
           {contributions.map((contribution) => (
             <li>
               <AnchorText href={contribution.pr.url} target="_blank">

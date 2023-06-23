@@ -1,5 +1,5 @@
-import { writeFileSync } from 'fs';
 import dotenv from 'dotenv';
+import { writeFileSync } from 'fs';
 import prettier from 'prettier';
 
 dotenv.config();
