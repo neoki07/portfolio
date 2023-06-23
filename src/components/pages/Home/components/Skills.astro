@@ -1,9 +1,9 @@
 ---
-import Badge from '../../shared/Badge.astro';
-import GithubMostUsedLanguages from '../../shared/Github/GithubMostUsedLanguages.astro';
-import H1 from '../../shared/Heading/H1.astro';
-import H2 from '../../shared/Heading/H2.astro';
-import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+import Badge from '../../../shared/Badge.astro';
+import GithubMostUsedLanguages from '../../../Github/GithubMostUsedLanguages.astro';
+import H1 from '../../../shared/H1.astro';
+import H2 from '../../../shared/H2.astro';
+import { getLangFromUrl, useTranslations } from '../../../../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);

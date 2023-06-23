@@ -1,9 +1,9 @@
 ---
-import { MYNAME } from '../constants/myname';
+import { MYNAME } from '../../../../constants/myname';
 
 const mynameTag = '{myname}';
 
-function splitTextWithMyname(text) {
+function splitTextWithMyname(text: string) {
   const regex = new RegExp(`(${mynameTag})`, 'g');
   return text.split(regex);
 }

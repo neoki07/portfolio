@@ -1,8 +1,8 @@
 ---
-import Profile from '../../Profile.astro';
-import GithubContributionGraph from '../../GithubContributionGraph.astro';
-import EmbedMyname from '../../EmbedMyname.astro';
-import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
+import Profile from './Profile.astro';
+import GithubContributionGraph from '../../../Github/GithubContributionGraph.astro';
+import EmbedMyname from './EmbedMyname.astro';
+import { getLangFromUrl, useTranslations } from '../../../../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);

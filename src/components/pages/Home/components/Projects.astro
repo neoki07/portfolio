@@ -1,11 +1,11 @@
 ---
-import Badge from '../../Badge.astro';
-import GithubIcon from '../../GithubIcon.astro';
-import ExternalLinkIcon from '../../ExternalLinkIcon.astro';
-import H1 from '../../H1.astro';
-import H2 from '../../H2.astro';
-import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
-import type { ProjectCategory } from '../../../i18n/translates';
+import Badge from '../../../shared/Badge.astro';
+import GithubIcon from '../../../shared/icons/GithubIcon.astro';
+import ExternalLinkIcon from '../../../shared/icons/ExternalLinkIcon.astro';
+import H1 from '../../../shared/H1.astro';
+import H2 from '../../../shared/H2.astro';
+import { getLangFromUrl, useTranslations } from '../../../../i18n/utils';
+import type { ProjectCategory } from '../../../../i18n/translates';
 import groupBy from 'lodash/groupBy';
 
 const lang = getLangFromUrl(Astro.url);
