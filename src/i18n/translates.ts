@@ -36,6 +36,13 @@ type Translates = {
   };
   ossContributions: {
     title: string;
+    contributions: Array<{
+      pr: {
+        title: string;
+        url: string;
+      };
+      project: string;
+    }>;
   };
 };
 
@@ -189,10 +196,28 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
   },
   ossContributions: {
     title: 'OSS Contributions',
+    contributions: [
+      {
+        pr: {
+          title:
+            'TypeScript: Fix issue with double semicolon caused by // prettier-ignore on a call signature line (#14830)',
+          url: 'https://github.com/prettier/prettier/pull/14830',
+        },
+        project: 'Prettier',
+      },
+      {
+        pr: {
+          title:
+            '[@mantine/core] AppShell: Fix wrong padding when navbarOffsetBreakpoint and asideOffsetBreakpoint have the same value (#4281)',
+          url: 'https://github.com/mantinedev/mantine/pull/4281',
+        },
+        project: 'Mantine',
+      },
+    ],
   },
 };
 
-const jaTranslates: Translates = merge(enTranslates, {
+const jaTranslates: Translates = merge({}, enTranslates, {
   intro: {
     greeting: 'こんにちは',
     paragraphs: [

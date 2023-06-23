@@ -23,6 +23,8 @@ const projectCategories: ProjectCategory[] = [
   'Websites',
   'JavaScript Libraries',
 ];
+
+const groupedContributions = groupBy(t.ossContributions.contributions, 'project');
 ---
 
 <Layout title={`${MYNAME}'s portfolio`}>
@@ -137,35 +139,27 @@ const projectCategories: ProjectCategory[] = [
     <hr class="border-gray-200 dark:border-gray-800" />
     <H1>{t.ossContributions.title}</H1>
     <div class="mt-8 space-y-8">
-      <div>
-        <H2>Prettier</H2>
-        <ul class="list-disc mt-2 [&>li]:ml-8">
-          <li>
-            <AnchorText
-              href="https://github.com/prettier/prettier/pull/14830"
-              target="_blank"
-            >
-              TypeScript: Fix issue with double semicolon caused by //
-              prettier-ignore on a call signature line (#14830)
-            </AnchorText>
-          </li>
-        </ul>
-      </div>
-      <div>
-        <H2>Mantine</H2>
-        <ul class="list-disc mt-2 [&>li]:ml-8">
-          <li>
-            <AnchorText
-              href="https://github.com/mantinedev/mantine/pull/4281"
-              target="_blank"
-            >
-              [@mantine/core] AppShell: Fix wrong padding when
-              navbarOffsetBreakpoint and asideOffsetBreakpoint have the same
-              value (#4281)
-            </AnchorText>
-          </li>
-        </ul>
-      </div>
+      {
+        Object.entries(groupedContributions).map(([project, contributions]) => (
+          <div class="space-y-4">
+            <H2>{project}</H2>
+            <ul class="list-disc mt-2 [&>li]:ml-8">
+              {
+                contributions.map((contribution) => (
+                  <li>
+                    <AnchorText
+                      href={contribution.pr.url}
+                      target="_blank"
+                    >
+                      {contribution.pr.title}
+                    </AnchorText>
+                  </li>
+                ))
+              }
+            </ul>
+          </div>
+        ))
+      }
     </div>
   </main>
 </Layout>
