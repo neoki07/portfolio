@@ -13,12 +13,12 @@ import H2 from '../../H2.astro';
 import { getLangFromUrl, useTranslations } from '../../../i18n/utils';
 import type { ProjectCategory } from '../../../i18n/translates';
 import { MYNAME } from '../../../constants/myname';
-import { group } from 'radash';
+import groupBy from 'lodash/groupBy';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 
-const groupedProjects = group(t.projects.projects, (p) => p.category);
+const groupedProjects = groupBy(t.projects.projects, 'category');
 const projectCategories: ProjectCategory[] = [
   'Websites',
   'JavaScript Libraries',
