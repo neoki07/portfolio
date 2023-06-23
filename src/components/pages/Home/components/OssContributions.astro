@@ -15,12 +15,12 @@ const groupedContributions = groupBy(
 ---
 
 <H1>{t.ossContributions.title}</H1>
-<div class="mt-8 space-y-8">
+<div class="space-y-8">
   {
     Object.entries(groupedContributions).map(([project, contributions]) => (
       <div class="space-y-4">
         <H2>{project}</H2>
-        <ul class="mt-2 list-disc [&>li]:ml-8">
+        <ul class="list-disc [&>li]:ml-8">
           {contributions.map((contribution) => (
             <li>
               <AnchorText href={contribution.pr.url} target="_blank">

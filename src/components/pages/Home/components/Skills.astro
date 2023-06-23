@@ -10,10 +10,10 @@ const t = useTranslations(lang);
 ---
 
 <H1>{t.skills.title}</H1>
-<div class="mt-8 space-y-8">
+<div class="space-y-8">
   <div>
     <H2>{t.skills.languagesLabel}</H2>
-    <ul class="mt-4 flex flex-wrap gap-1.5">
+    <ul class="flex flex-wrap gap-1.5">
       {
         t.skills.languages.map((skill) => (
           <li class="">
@@ -25,7 +25,7 @@ const t = useTranslations(lang);
   </div>
   <div>
     <H2>{t.skills.frameworksLabel} & {t.skills.librariesLabel}</H2>
-    <ul class="mt-4 flex flex-wrap gap-1.5">
+    <ul class="flex flex-wrap gap-1.5">
       {
         t.skills.frameworksAndLibraries.map((skill) => (
           <li>
@@ -37,7 +37,7 @@ const t = useTranslations(lang);
   </div>
   <div>
     <H2>{t.skills.mostUsedLanguagesLabel}</H2>
-    <div class="mt-4">
+    <div>
       <GithubMostUsedLanguages />
     </div>
   </div>
