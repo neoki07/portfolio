@@ -23,3 +23,6 @@ pnpm-debug.log*
 
 # lock files
 pnpm-lock.yaml
+
+# generated files by scripts
+src/data
