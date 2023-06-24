@@ -25,46 +25,48 @@ const projectCategories: ProjectCategory[] = [
       <div>
         <H2>{category}</H2>
         <div class="space-y-4">
-        {groupedProjects[category]?.map((project) => (
-          <div class="rounded-lg border p-6 dark:border-gray-800">
-            <div class="flex items-center space-x-2">
-              <div class="font-semibold text-gray-700 dark:text-gray-300">{project.name}</div>
+          {groupedProjects[category]?.map((project) => (
+            <div class="rounded-lg border p-6 dark:border-gray-800">
+              <div class="flex items-center space-x-2">
+                <div class="font-semibold text-gray-700 dark:text-gray-300">
+                  {project.name}
+                </div>
 
-              <div class="child:dark:hover:text-gray-400 text-gray-400 dark:text-gray-500">
-                <a
-                  href={project.repoUrl}
-                  target="_blank"
-                  class="hover:text-gray-500 dark:hover:text-gray-400"
-                >
-                  <GithubIcon />
-                </a>
-              </div>
-
-              {project.demoUrl && (
                 <div class="child:dark:hover:text-gray-400 text-gray-400 dark:text-gray-500">
                   <a
-                    href={project.demoUrl}
+                    href={project.repoUrl}
                     target="_blank"
                     class="hover:text-gray-500 dark:hover:text-gray-400"
                   >
-                    <ExternalLinkIcon />
+                    <GithubIcon />
                   </a>
                 </div>
-              )}
+
+                {project.demoUrl && (
+                  <div class="child:dark:hover:text-gray-400 text-gray-400 dark:text-gray-500">
+                    <a
+                      href={project.demoUrl}
+                      target="_blank"
+                      class="hover:text-gray-500 dark:hover:text-gray-400"
+                    >
+                      <ExternalLinkIcon />
+                    </a>
+                  </div>
+                )}
+              </div>
+
+              <p class="mt-2 text-sm leading-normal">{project.description}</p>
+
+              <ul class="mt-4 flex flex-wrap gap-1.5">
+                {project.technologies.map((skill) => (
+                  <li>
+                    <Badge>{skill}</Badge>
+                  </li>
+                ))}
+              </ul>
             </div>
-
-            <p class="mt-2 text-sm leading-normal">{project.description}</p>
-
-            <ul class="mt-4 flex flex-wrap gap-1.5">
-              {project.technologies.map((skill) => (
-                <li>
-                  <Badge>{skill}</Badge>
-                </li>
-              ))}
-            </ul>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
       </div>
     ))
   }
