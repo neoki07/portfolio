@@ -22,8 +22,9 @@ const projectCategories: ProjectCategory[] = [
 <div class="space-y-8">
   {
     projectCategories.map((category) => (
-      <div class="space-y-4">
+      <div>
         <H2>{category}</H2>
+        <div class="space-y-4">
         {groupedProjects[category]?.map((project) => (
           <div class="rounded-lg border p-6 dark:border-gray-800">
             <div class="flex items-center space-x-2">
@@ -63,6 +64,7 @@ const projectCategories: ProjectCategory[] = [
             </ul>
           </div>
         ))}
+      </div>
       </div>
     ))
   }

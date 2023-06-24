@@ -8,8 +8,10 @@ const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
 ---
 
-<div class="space-y-4 mb-10">
+<div class="mb-6">
   <Profile />
+</div>
+<div class="mb-10">
   <GithubContributionGraph />
 </div>
 <div class="space-y-5 text-gray-700 dark:text-gray-400">

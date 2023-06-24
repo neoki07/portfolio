@@ -18,7 +18,7 @@ const groupedContributions = groupBy(
 <div class="space-y-8">
   {
     Object.entries(groupedContributions).map(([project, contributions]) => (
-      <div class="space-y-4">
+      <div>
         <H2>{project}</H2>
         <ul class="list-disc [&>li]:ml-8">
           {contributions.map((contribution) => (
