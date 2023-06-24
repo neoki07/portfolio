@@ -7,7 +7,11 @@ export const languages = {
 
 export const defaultLang = 'en';
 
-export type ProjectCategory = 'Websites' | 'JavaScript Libraries' | 'CLI Tools';
+export type ProjectCategory =
+  | 'Websites'
+  | 'Websites for Studying'
+  | 'npm Packages'
+  | 'CLI Tools';
 
 type Translates = {
   intro: {
@@ -117,7 +121,7 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
           'Markdoc',
           'Vercel',
         ],
-        category: 'Websites',
+        category: 'Websites for Studying',
       },
       {
         name: '[WIP] Next Bazaar',
@@ -141,7 +145,7 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
           'Vercel',
           'Render',
         ],
-        category: 'Websites',
+        category: 'Websites for Studying',
       },
       {
         name: 'Music Transformer Playground',
@@ -166,7 +170,7 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
       {
         name: 'Recital',
         repoUrl: 'https://github.com/resonance-box/recital',
-        description: `A musical tools for the browser`,
+        description: 'A musical tools for the browser',
         technologies: [
           'TypeScript',
           'React',
@@ -175,12 +179,12 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
           'Immer',
           'sf2-synth-audio-worklet (my library)',
         ],
-        category: 'JavaScript Libraries',
+        category: 'npm Packages',
       },
       {
         name: 'sf2-synth-audio-worklet',
         repoUrl: 'https://github.com/resonance-box/sf2-synth-audio-worklet',
-        description: `An Audio Worklet-based SoundFont2 synthesizer`,
+        description: 'An Audio Worklet-based SoundFont2 synthesizer',
         technologies: [
           'TypeScript',
           'Vite',
@@ -190,7 +194,15 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
           'WebAssembly',
           'SoundFont2',
         ],
-        category: 'JavaScript Libraries',
+        category: 'npm Packages',
+      },
+      {
+        name: 'git-co',
+        repoUrl: 'https://github.com/ot07/git-co',
+        description:
+          'A CLI tool for branch switching by providing a selection-based checkout process',
+        technologies: ['Rust', 'clap', 'skim'],
+        category: 'CLI Tools',
       },
     ],
   },
