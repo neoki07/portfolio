@@ -11,6 +11,7 @@ export type ProjectCategory =
   | 'Websites'
   | 'Websites for Studying'
   | 'npm Packages'
+  | 'Prettier Plugins'
   | 'CLI Tools';
 
 type Translates = {
@@ -195,6 +196,14 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
           'SoundFont2',
         ],
         category: 'npm Packages',
+      },
+      {
+        name: '[WIP] prettier-plugin-astro-with-organize-imports',
+        repoUrl:
+          'https://github.com/ot07/prettier-plugin-astro-with-organize-imports',
+        description: 'A Prettier plugin for formatting imports in Astro files',
+        technologies: ['TypeScript', 'Prettier', 'Astro', 'Rollup'],
+        category: 'Prettier Plugins',
       },
       {
         name: 'git-co',
