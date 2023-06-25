@@ -37,9 +37,6 @@ devDependencies:
   prettier-plugin-astro:
     specifier: ^0.10.0
     version: 0.10.0
-  prettier-plugin-astro-with-organize-imports:
-    specifier: ^0.0.1
-    version: 0.0.1
   prettier-plugin-organize-imports:
     specifier: ^3.2.2
     version: 3.2.2(prettier@2.8.8)(typescript@5.1.3)
@@ -2560,14 +2557,6 @@ packages:
       path-exists: 4.0.0
       which-pm: 2.0.0
     dev: false
-
-  /prettier-plugin-astro-with-organize-imports@0.0.1:
-    resolution: {integrity: sha512-RyiCDQQIz1dfvwRUMilmZvJNGGeF0hq924rA1Td4xW5YWtC7PF20W0YiCuqiuzN0YPAp52AXjafUAlTQcsqwMA==}
-    engines: {node: '>=16.0.0', pnpm: '>=8.6.0'}
-    dependencies:
-      prettier: 2.8.8
-      prettier-plugin-astro: 0.10.0
-    dev: true
 
   /prettier-plugin-astro@0.10.0:
     resolution: {integrity: sha512-dPzop0gKZyVGpTDQmfy+e7FKXC9JT3mlpfYA2diOVz+Ui+QR1U4G/s+OesKl2Hib2JJOtAYJs/l+ovgT0ljlFA==}
