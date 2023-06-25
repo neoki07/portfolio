@@ -2,7 +2,7 @@
   "singleQuote": true,
   "semi": true,
   "plugins": [
-    "prettier-plugin-astro-with-organize-imports",
+    "prettier-plugin-astro",
     "prettier-plugin-tailwindcss",
     "prettier-plugin-organize-imports"
   ],
@@ -10,7 +10,7 @@
     {
       "files": "*.astro",
       "options": {
-        "parser": "astro-with-organize-imports"
+        "parser": "astro"
       }
     }
   ]
