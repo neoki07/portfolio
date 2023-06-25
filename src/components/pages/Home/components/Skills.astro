@@ -1,9 +1,9 @@
 ---
-import Badge from '../../../shared/Badge.astro';
+import { getLangFromUrl, useTranslations } from '../../../../i18n/utils';
 import GithubMostUsedLanguages from '../../../Github/GithubMostUsedLanguages.astro';
+import Badge from '../../../shared/Badge.astro';
 import H1 from '../../../shared/H1.astro';
 import H2 from '../../../shared/H2.astro';
-import { getLangFromUrl, useTranslations } from '../../../../i18n/utils';
 
 const lang = getLangFromUrl(Astro.url);
 const t = useTranslations(lang);
@@ -13,7 +13,7 @@ const t = useTranslations(lang);
 <div class="space-y-8">
   <div>
     <H2>{t.skills.languagesLabel}</H2>
-    <ul class="flex flex-wrap gap-1.5">
+    <ul class="gap-1.5 flex flex-wrap">
       {
         t.skills.languages.map((skill) => (
           <li class="">
@@ -25,7 +25,7 @@ const t = useTranslations(lang);
   </div>
   <div>
     <H2>{t.skills.frameworksLabel} & {t.skills.librariesLabel}</H2>
-    <ul class="flex flex-wrap gap-1.5">
+    <ul class="gap-1.5 flex-wrap flex">
       {
         t.skills.frameworksAndLibraries.map((skill) => (
           <li>
