@@ -274,10 +274,16 @@ Web開発においては、モダンなプログラミング言語やフレー�
           'Music Transformerと呼ばれるAIを使って、簡単にピアノの演奏を生成することができるプレイグラウンド',
       },
       {
-        description: `ブラウザ向けの音楽ツール`,
+        description: 'ブラウザ向けの音楽ツール',
       },
       {
-        description: `Audio Workletを利用したSoundFont2シンセサイザー`,
+        description: 'Audio Workletを利用したSoundFont2シンセサイザー',
+      },
+      {
+        description: 'Astroファイルのimport文を整形するPrettierプラグイン',
+      },
+      {
+        description: '選択形式でブランチを切り替える処理を提供するCLIツール',
       },
     ],
   },
