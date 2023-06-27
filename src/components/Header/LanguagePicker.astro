@@ -1,5 +1,5 @@
 ---
-import { languages } from '../../i18n/translates';
+import { defaultLang,languages } from '../../i18n/translates';
 ---
 
 <ul class="flex h-full items-center justify-center space-x-1.5">
@@ -11,7 +11,7 @@ import { languages } from '../../i18n/translates';
         )}
         <li class="flex items-center justify-center">
           <a
-            href={`/${lang}/`}
+            href={lang === defaultLang ? '/' : `/${lang}`}
             class="text-sm font-light hover:text-gray-500 hover:dark:text-gray-400"
           >
             {label}
