@@ -38,6 +38,7 @@ const projectCategories: ProjectCategory[] = [
                 <div class="child:dark:hover:text-gray-400 text-gray-400 dark:text-gray-500">
                   <a
                     href={project.repoUrl}
+                    aria-label={`GitHub repository for ${project.name}`}
                     target="_blank"
                     class="hover:text-gray-500 dark:hover:text-gray-400"
                   >
@@ -49,6 +50,7 @@ const projectCategories: ProjectCategory[] = [
                   <div class="child:dark:hover:text-gray-400 text-gray-400 dark:text-gray-500">
                     <a
                       href={project.demoUrl}
+                      aria-label={`Demo for ${project.name}`}
                       target="_blank"
                       class="hover:text-gray-500 dark:hover:text-gray-400"
                     >

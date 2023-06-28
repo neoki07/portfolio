@@ -23,7 +23,11 @@ const groupedContributions = groupBy(
         <ul class="list-disc [&>li]:ml-8">
           {contributions.map((contribution) => (
             <li>
-              <AnchorText href={contribution.pr.url} target="_blank">
+              <AnchorText
+              href={contribution.pr.url}
+              area-label={contribution.pr.title}
+              target="_blank"
+            >
                 {contribution.pr.title}
               </AnchorText>
             </li>
