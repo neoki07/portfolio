@@ -35,24 +35,24 @@ const projectCategories: ProjectCategory[] = [
                   {project.name}
                 </div>
 
-                <div class="child:dark:hover:text-gray-400 text-gray-400 dark:text-gray-500">
+                <div class="child:dark:hover:text-gray-400 text-gray-500 dark:text-gray-500">
                   <a
                     href={project.repoUrl}
                     aria-label={`GitHub repository for ${project.name}`}
                     target="_blank"
-                    class="hover:text-gray-500 dark:hover:text-gray-400"
+                    class="hover:text-gray-600 dark:hover:text-gray-400"
                   >
                     <GithubIcon />
                   </a>
                 </div>
 
                 {project.demoUrl && (
-                  <div class="child:dark:hover:text-gray-400 text-gray-400 dark:text-gray-500">
+                  <div class="child:dark:hover:text-gray-400 text-gray-500 dark:text-gray-500">
                     <a
                       href={project.demoUrl}
                       aria-label={`Demo for ${project.name}`}
                       target="_blank"
-                      class="hover:text-gray-500 dark:hover:text-gray-400"
+                      class="hover:text-gray-600 dark:hover:text-gray-400"
                     >
                       <ExternalLinkIcon />
                     </a>
