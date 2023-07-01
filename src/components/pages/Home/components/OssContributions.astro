@@ -24,10 +24,10 @@ const groupedContributions = groupBy(
           {contributions.map((contribution) => (
             <li>
               <AnchorText
-              href={contribution.pr.url}
-              area-label={contribution.pr.title}
-              target="_blank"
-            >
+                href={contribution.pr.url}
+                area-label={contribution.pr.title}
+                target="_blank"
+              >
                 {contribution.pr.title}
               </AnchorText>
             </li>
