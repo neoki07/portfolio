@@ -1,6 +1,5 @@
 export const weeklyContributions = [
   [
-    { contributionCount: 2, date: "2022-06-26" },
     { contributionCount: 1, date: "2022-07-03" },
     { contributionCount: 2, date: "2022-07-10" },
     { contributionCount: 11, date: "2022-07-17" },
@@ -53,9 +52,9 @@ export const weeklyContributions = [
     { contributionCount: 2, date: "2023-06-11" },
     { contributionCount: 11, date: "2023-06-18" },
     { contributionCount: 20, date: "2023-06-25" },
+    { contributionCount: 6, date: "2023-07-02" },
   ],
   [
-    { contributionCount: 2, date: "2022-06-27" },
     { contributionCount: 1, date: "2022-07-04" },
     { contributionCount: 1, date: "2022-07-11" },
     { contributionCount: 1, date: "2022-07-18" },
@@ -110,7 +109,6 @@ export const weeklyContributions = [
     { contributionCount: 5, date: "2023-06-26" },
   ],
   [
-    { contributionCount: 3, date: "2022-06-28" },
     { contributionCount: 5, date: "2022-07-05" },
     { contributionCount: 2, date: "2022-07-12" },
     { contributionCount: 1, date: "2022-07-19" },
@@ -165,7 +163,6 @@ export const weeklyContributions = [
     { contributionCount: 6, date: "2023-06-27" },
   ],
   [
-    { contributionCount: 1, date: "2022-06-29" },
     { contributionCount: 1, date: "2022-07-06" },
     { contributionCount: 1, date: "2022-07-13" },
     { contributionCount: 1, date: "2022-07-20" },
@@ -220,7 +217,6 @@ export const weeklyContributions = [
     { contributionCount: 1, date: "2023-06-28" },
   ],
   [
-    { contributionCount: 2, date: "2022-06-30" },
     { contributionCount: 5, date: "2022-07-07" },
     { contributionCount: 0, date: "2022-07-14" },
     { contributionCount: 2, date: "2022-07-21" },
@@ -275,7 +271,6 @@ export const weeklyContributions = [
     { contributionCount: 3, date: "2023-06-29" },
   ],
   [
-    { contributionCount: 2, date: "2022-07-01" },
     { contributionCount: 2, date: "2022-07-08" },
     { contributionCount: 0, date: "2022-07-15" },
     { contributionCount: 1, date: "2022-07-22" },
@@ -330,7 +325,6 @@ export const weeklyContributions = [
     { contributionCount: 1, date: "2023-06-30" },
   ],
   [
-    { contributionCount: 1, date: "2022-07-02" },
     { contributionCount: 9, date: "2022-07-09" },
     { contributionCount: 7, date: "2022-07-16" },
     { contributionCount: 5, date: "2022-07-23" },
@@ -382,6 +376,6 @@ export const weeklyContributions = [
     { contributionCount: 8, date: "2023-06-10" },
     { contributionCount: 12, date: "2023-06-17" },
     { contributionCount: 8, date: "2023-06-24" },
-    { contributionCount: 0, date: "2023-07-01" },
+    { contributionCount: 5, date: "2023-07-01" },
   ],
 ];
