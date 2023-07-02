@@ -34,6 +34,7 @@ type Translates = {
       name: string;
       repoUrl: string;
       demoUrl?: string;
+      packageUrl?: string;
       description: string;
       technologies: string[];
       category: ProjectCategory;
@@ -171,6 +172,8 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
       {
         name: 'Recital',
         repoUrl: 'https://github.com/resonance-box/recital',
+        packageUrl:
+          'https://www.npmjs.com/package/@resonance-box/react-recital',
         description: 'A musical tools for the browser',
         technologies: [
           'TypeScript',
@@ -185,6 +188,7 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
       {
         name: 'sf2-synth-audio-worklet',
         repoUrl: 'https://github.com/resonance-box/sf2-synth-audio-worklet',
+        packageUrl: 'https://www.npmjs.com/package/sf2-synth-audio-worklet',
         description: 'An Audio Worklet-based SoundFont2 synthesizer',
         technologies: [
           'TypeScript',
@@ -201,6 +205,8 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
         name: 'prettier-plugin-astro-organize-imports',
         repoUrl:
           'https://github.com/ot07/prettier-plugin-astro-with-organize-imports',
+        packageUrl:
+          'https://www.npmjs.com/package/prettier-plugin-astro-organize-imports',
         description: 'A Prettier plugin for formatting imports in Astro files',
         technologies: ['TypeScript', 'Prettier', 'Astro', 'Rollup'],
         category: 'Prettier Plugins',
@@ -208,6 +214,7 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
       {
         name: 'git-co',
         repoUrl: 'https://github.com/ot07/git-co',
+        packageUrl: 'https://crates.io/crates/git-co',
         description:
           'A CLI tool for branch switching by providing a selection-based checkout process',
         technologies: ['Rust', 'clap', 'skim'],
