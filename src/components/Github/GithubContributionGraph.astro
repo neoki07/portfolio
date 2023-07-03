@@ -77,10 +77,12 @@ function getWeekday(date: Date) {
                 >
                   <span class="pointer-events-none invisible absolute left-1/2 top-[-45px] z-10 inline-block -translate-x-1/2 whitespace-nowrap rounded-md bg-black px-[0.875rem] py-[0.5625rem] text-xs text-white opacity-0 before:pointer-events-none before:absolute before:bottom-[-13px] before:left-1/2 before:z-10 before:ml-[-7px] before:border-[7px] before:border-black before:border-x-transparent before:border-b-transparent before:content-[''] group-hover:visible group-hover:opacity-100 dark:bg-gray-500 dark:text-gray-300 before:dark:border-gray-500 before:dark:border-x-transparent before:dark:border-b-transparent">
                     {`${
-                      contribution.contributionCount
-                    } contributions on ${getWeekday(date)}, ${formatDate(
-                      date
-                    )}`}
+                      contribution.contributionCount === 0
+                        ? 'No contributions'
+                        : contribution.contributionCount === 1
+                        ? '1 contribution'
+                        : contribution.contributionCount + ' contributions'
+                    } on ${getWeekday(date)}, ${formatDate(date)}`}
                   </span>
                 </td>
               );
