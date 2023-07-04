@@ -21,12 +21,10 @@ type Translates = {
   };
   skills: {
     title: string;
-    languagesLabel: string;
+    mostUsedLanguagesLabel: string;
     frameworksLabel: string;
     librariesLabel: string;
-    languages: string[];
     frameworksAndLibraries: string[];
-    mostUsedLanguagesLabel: string;
   };
   projects: {
     title: string;
@@ -73,19 +71,9 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
   },
   skills: {
     title: 'Skills',
-    languagesLabel: 'Languages',
+    mostUsedLanguagesLabel: 'Most Used Languages',
     frameworksLabel: 'Frameworks',
     librariesLabel: 'Libraries',
-    languages: [
-      'TypeScript',
-      'JavaScript',
-      'HTML',
-      'CSS',
-      'Go',
-      'Rust',
-      'Python',
-      'PHP',
-    ],
     frameworksAndLibraries: [
       'React',
       'Next.js',
@@ -100,7 +88,6 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
       'Laravel',
       'Ansible',
     ],
-    mostUsedLanguagesLabel: 'Most Used Languages',
   },
   projects: {
     title: 'Projects',
@@ -261,10 +248,9 @@ Web開発においては、モダンなプログラミング言語やフレー�
   },
   skills: {
     title: 'スキル',
-    languagesLabel: '言語',
+    mostUsedLanguagesLabel: 'よく使用している言語',
     frameworksLabel: 'フレームワーク',
     librariesLabel: 'ライブラリ',
-    mostUsedLanguagesLabel: 'よく使用している言語',
   },
   projects: {
     title: 'プロジェクト',
