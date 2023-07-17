@@ -93,26 +93,6 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
     title: 'Projects',
     projects: [
       {
-        name: '[WIP] Myposts',
-        repoUrl: 'https://github.com/ot07/myposts',
-        demoUrl: 'https://myposts-dev.vercel.app',
-        description:
-          'A platform where you can view and share posts in Markdown format',
-        technologies: [
-          'TypeScript',
-          'React',
-          'Next.js',
-          'tRPC',
-          'Tailwind CSS',
-          'Prisma',
-          'React Hook Form',
-          'Zod',
-          'Markdoc',
-          'Vercel',
-        ],
-        category: 'Websites for Studying',
-      },
-      {
         name: '[WIP] Next Bazaar',
         repoUrl: 'https://github.com/ot07/next-bazaar',
         demoUrl: 'https://next-bazaar.vercel.app',
@@ -133,6 +113,26 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
           'Swagger',
           'Vercel',
           'Render',
+        ],
+        category: 'Websites for Studying',
+      },
+      {
+        name: '[WIP] Myposts',
+        repoUrl: 'https://github.com/ot07/myposts',
+        demoUrl: 'https://myposts-dev.vercel.app',
+        description:
+          'A platform where you can view and share posts in Markdown format',
+        technologies: [
+          'TypeScript',
+          'React',
+          'Next.js',
+          'tRPC',
+          'Tailwind CSS',
+          'Prisma',
+          'React Hook Form',
+          'Zod',
+          'Markdoc',
+          'Vercel',
         ],
         category: 'Websites for Studying',
       },
@@ -256,11 +256,11 @@ Web開発においては、モダンなプログラミング言語やフレー�
     title: 'プロジェクト',
     projects: [
       {
-        description:
-          'Markdown形式の記事を閲覧・共有することができるプラットフォーム',
+        description: '商品の売買ができるオンラインショッピングサイト',
       },
       {
-        description: '商品の売買ができるオンラインショッピングサイト',
+        description:
+          'Markdown形式の記事を閲覧・共有することができるプラットフォーム',
       },
       {
         description:
