@@ -102,6 +102,8 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
           'TypeScript',
           'React',
           'Next.js',
+          'Jest',
+          'Storybook',
           'Tanstack Query',
           'Mantine',
           'React Hook Form',
