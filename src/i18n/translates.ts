@@ -59,14 +59,8 @@ const enTranslates: Translates = {
     greeting: 'Hi there',
     paragraphs: [
       `I am {myname}, a web developer.
-I specialize in front-end development with React, and engage in back-end development using Laravel for work.`,
-      `I am currently interested in coding techniques that facilitate easy addition and modification of functionalities.
-Consequently, I strive to learn about architectures and design patterns, gradually incorporating them into my own development.`,
-      `In addition, I have a strong interest in personal development, specifically in enhancing my web development skills, and I engage in OSS activities.
-In my personal development, I devote myself to improving my web development skills and pursuing developments related to my passion for music.
-In the realm of web development, I leverage modern programming languages and frameworks, incorporating best practices such as architecture and design patterns, to create flexible and robust code.
-In the field of music-related development, my focus revolves around enabling music enjoyment on the web,
-including the development of a synthesizer library utilizing SoundFont2 as the sound source and the creation of web applications that utilize AI for generating piano compositions.`,
+I specialize in front-end development with React, and engage in back-end development using Laravel for work.
+I also work on personal web development projects aimed at honing my skills, as well as pursuing my passion for music. Furthermore, I contribute to OSS projects, all of which I enjoy doing on a daily basis.`,
     ],
   },
   skills: {
@@ -242,13 +236,8 @@ const jaTranslates: Translates = merge({}, enTranslates, {
     greeting: 'こんにちは',
     paragraphs: [
       `Web開発者の{myname}です。
-Reactを使用したフロントエンド開発を得意としており、仕事ではLaravelを使ったバックエンド開発にも携わっています。`,
-      `最近は、機能の追加や修正を容易に行えるコーディング手法に関心があります。
-そのため、アーキテクチャやデザインパターンを学習し、自身の開発に少しずつ取り入れることに努めています。`,
-      `また、個人開発やOSS活動にも興味を持っており、日々積極的に取り組んでいます。
-個人開発では、Web開発のスキル向上と私自身の趣味である音楽に関連した開発に力を注いでいます。
-Web開発においては、モダンなプログラミング言語やフレームワークを活用しながら、アーキテクチャやデザインパターンなどのベストプラクティスを取り入れ、柔軟性と堅牢性のあるコードを作成することを大切にしています。
-音楽に関連した開発では、Web上で音楽を楽しむことをテーマに、SoundFont2を音源とするシンセサイザーライブラリや、ピアノ曲を自動生成するAIを活用したWebサイトの開発などに取り組んでいます。`,
+Reactを使用したフロントエンド開発を得意としており、仕事ではLaravelを使ったバックエンド開発にも携わっています。
+他にも、Web開発のスキル向上や趣味である音楽をテーマとした個人開発や、OSSプロジェクトへのコントリビュートなども行っており、日々楽しみながら活動しています。`,
     ],
   },
   skills: {
