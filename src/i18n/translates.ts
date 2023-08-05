@@ -153,27 +153,13 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
           'Python',
           'FastAPI',
           'Music Transformer',
-          'Recital (my library)',
+          'Docker',
           'Vercel',
           'Cloud Run',
-        ],
-        category: 'Websites',
-      },
-      {
-        name: 'Recital',
-        repoUrl: 'https://github.com/resonance-box/recital',
-        packageUrl:
-          'https://www.npmjs.com/package/@resonance-box/react-recital',
-        description: 'A musical tools for the browser',
-        technologies: [
-          'TypeScript',
-          'React',
-          'Vite',
-          'Zustand',
-          'Immer',
+          'Recital (my library)',
           'sf2-synth-audio-worklet (my library)',
         ],
-        category: 'npm Packages',
+        category: 'Websites',
       },
       {
         name: 'sf2-synth-audio-worklet',
@@ -188,6 +174,22 @@ including the development of a synthesizer library utilizing SoundFont2 as the s
           'Rust',
           'WebAssembly',
           'SoundFont2',
+        ],
+        category: 'npm Packages',
+      },
+      {
+        name: '[WIP] Recital',
+        repoUrl: 'https://github.com/resonance-box/recital',
+        packageUrl:
+          'https://www.npmjs.com/package/@resonance-box/react-recital',
+        description: 'A musical tools for the browser',
+        technologies: [
+          'TypeScript',
+          'React',
+          'Vite',
+          'Zustand',
+          'Immer',
+          'sf2-synth-audio-worklet (my library)',
         ],
         category: 'npm Packages',
       },
@@ -270,10 +272,10 @@ Web開発においては、モダンなプログラミング言語やフレー�
           'Music Transformerと呼ばれるAIを使って、簡単にピアノの演奏を生成することができるプレイグラウンド',
       },
       {
-        description: 'ブラウザ向けの音楽ツール',
+        description: 'Audio Workletを利用したSoundFont2シンセサイザー',
       },
       {
-        description: 'Audio Workletを利用したSoundFont2シンセサイザー',
+        description: 'ブラウザ向けの音楽ツール',
       },
       {
         description: 'Astroファイルのimport文を整形するPrettierプラグイン',
