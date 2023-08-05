@@ -286,7 +286,7 @@ Web開発においては、モダンなプログラミング言語やフレー�
     ],
   },
   ossContributions: {
-    title: 'OSS活動',
+    title: 'OSSコントリビューション',
   },
 });
 
