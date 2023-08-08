@@ -41,12 +41,22 @@ type Translates = {
   ossContributions: {
     title: string;
     contributions: Array<{
-      pr: {
+      pullRequest: {
         title: string;
         url: string;
       };
       project: string;
     }>;
+    others: {
+      title: string;
+      groups: Array<{
+        title: string;
+        pullRequests: Array<{
+          title: string;
+          url: string;
+        }>;
+      }>;
+    };
   };
 };
 
@@ -213,7 +223,7 @@ I also work on personal web development projects aimed at honing my skills, as w
     title: 'OSS Contributions',
     contributions: [
       {
-        pr: {
+        pullRequest: {
           title:
             'TypeScript: Fix issue with double semicolon caused by // prettier-ignore on a call signature line (#14830)',
           url: 'https://github.com/prettier/prettier/pull/14830',
@@ -221,7 +231,7 @@ I also work on personal web development projects aimed at honing my skills, as w
         project: 'Prettier',
       },
       {
-        pr: {
+        pullRequest: {
           title:
             '[@mantine/core] AppShell: Fix wrong padding when navbarOffsetBreakpoint and asideOffsetBreakpoint have the same value (#4281)',
           url: 'https://github.com/mantinedev/mantine/pull/4281',
@@ -229,6 +239,32 @@ I also work on personal web development projects aimed at honing my skills, as w
         project: 'Mantine',
       },
     ],
+    others: {
+      title: 'Others',
+      groups: [
+        {
+          title: 'Fix typos',
+          pullRequests: [
+            {
+              title: 'mantinedev/mantine#4290',
+              url: 'https://github.com/mantinedev/mantine/pull/4290',
+            },
+            {
+              title: 'withastro/docs#3308',
+              url: 'https://github.com/withastro/docs/pull/3308',
+            },
+            {
+              title: 'withastro/docs#3310',
+              url: 'https://github.com/withastro/docs/pull/3310',
+            },
+            {
+              title: 'withastro/docs#3321',
+              url: 'https://github.com/withastro/docs/pull/3321',
+            },
+          ],
+        },
+      ],
+    },
   },
 };
 
@@ -278,6 +314,14 @@ Reactを使用したフロントエンド開発を得意としており、仕事
   },
   ossContributions: {
     title: 'OSSコントリビューション',
+    others: {
+      title: 'その他',
+      groups: [
+        {
+          title: 'タイポ修正',
+        },
+      ],
+    },
   },
 });
 
