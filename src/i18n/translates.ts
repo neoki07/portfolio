@@ -176,7 +176,8 @@ I also work on personal web development projects aimed at honing my skills, as w
         repoUrl: 'https://github.com/resonance-box/recital',
         packageUrl:
           'https://www.npmjs.com/package/@resonance-box/react-recital',
-        description: 'A musical tools for the browser',
+        description:
+          'A musical tools for the browser (Sequencer, Piano-Roll UI, etc.)',
         technologies: [
           'TypeScript',
           'React',
@@ -264,7 +265,8 @@ Reactを使用したフロントエンド開発を得意としており、仕事
         description: 'Audio Workletを利用したSoundFont2シンセサイザー',
       },
       {
-        description: 'ブラウザ向けの音楽ツール',
+        description:
+          'ブラウザ向けの音楽ツール（シーケンサーやピアノロールUIなど）',
       },
       {
         description: 'Astroファイルのimport文を整形するPrettierプラグイン',
