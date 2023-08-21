@@ -8,7 +8,7 @@ export const mostUsedLanguages = [
   { name: "Astro", totalSize: 54457, color: "#ff5a03" },
   { name: "C", totalSize: 38881, color: "#555555" },
   { name: "Verilog", totalSize: 15734, color: "#b2b7f8" },
-  { name: "Shell", totalSize: 11387, color: "#89e051" },
+  { name: "Shell", totalSize: 11425, color: "#89e051" },
   { name: "HTML", totalSize: 5785, color: "#e34c26" },
   { name: "Dockerfile", totalSize: 3996, color: "#384d54" },
   { name: "Makefile", totalSize: 2623, color: "#427819" },
