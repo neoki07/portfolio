@@ -14,6 +14,6 @@ export const mostUsedLanguages = [
   { name: "Makefile", totalSize: 2623, color: "#427819" },
   { name: "SystemVerilog", totalSize: 1829, color: "#DAE1C2" },
   { name: "Lua", totalSize: 1759, color: "#000080" },
-  { name: "Ruby", totalSize: 310, color: "#701516" },
+  { name: "Ruby", totalSize: 326, color: "#701516" },
   { name: "SCSS", totalSize: 104, color: "#c6538c" },
 ];
