@@ -1,5 +1,5 @@
 export const mostUsedLanguages = [
-  { name: "TypeScript", totalSize: 776147, color: "#3178c6" },
+  { name: "TypeScript", totalSize: 777428, color: "#3178c6" },
   { name: "Rust", totalSize: 316824, color: "#dea584" },
   { name: "Go", totalSize: 281009, color: "#00ADD8" },
   { name: "Python", totalSize: 209732, color: "#3572A5" },
