@@ -127,15 +127,15 @@ async function main() {
   writeFileSync(
     'src/data/weeklyContributions.js',
     `export const weeklyContributions = ${format(
-      JSON.stringify(weeklyContributions)
-    )}`
+      JSON.stringify(weeklyContributions),
+    )}`,
   );
 
   const languages = await getMostUsedLanguages();
 
   writeFileSync(
     'src/data/mostUsedLanguages.js',
-    `export const mostUsedLanguages = ${format(JSON.stringify(languages))}`
+    `export const mostUsedLanguages = ${format(JSON.stringify(languages))}`,
   );
 }
 
