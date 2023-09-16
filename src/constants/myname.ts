@@ -1,1 +1,1 @@
-export const MYNAME = 'ot07';
+export const MYNAME = 'ot07'

@@ -1,68 +1,68 @@
-import merge from 'lodash/merge';
+import merge from 'lodash/merge'
 
 export const languages = {
   en: 'EN',
   ja: 'JA',
-};
+}
 
-export const defaultLang = 'en';
+export const defaultLang = 'en'
 
 export type ProjectCategory =
   | 'Websites'
   | 'Websites for Studying'
   | 'npm Packages'
   | 'Prettier Plugins'
-  | 'CLI Tools';
+  | 'CLI Tools'
 
 type Translates = {
   intro: {
-    greeting: string;
-    paragraphs: string[];
-  };
+    greeting: string
+    paragraphs: string[]
+  }
   skills: {
-    title: string;
-    mostUsedLanguagesLabel: string;
-    frameworksLabel: string;
-    librariesLabel: string;
-    frameworksAndLibraries: string[];
-  };
+    title: string
+    mostUsedLanguagesLabel: string
+    frameworksLabel: string
+    librariesLabel: string
+    frameworksAndLibraries: string[]
+  }
   projects: {
-    title: string;
+    title: string
     projects: Array<{
-      name: string;
-      repoUrl: string;
-      demoUrl?: string;
-      packageUrl?: string;
-      description: string;
-      technologies: string[];
-      category: ProjectCategory;
-    }>;
-  };
+      name: string
+      repoUrl: string
+      demoUrl?: string
+      packageUrl?: string
+      description: string
+      technologies: string[]
+      category: ProjectCategory
+    }>
+  }
   ossContributions: {
-    title: string;
+    title: string
     contributions: Array<{
       pullRequest: {
-        title: string;
-        url: string;
-      };
-      project: string;
-    }>;
+        title: string
+        url: string
+      }
+      project: string
+    }>
     others: {
-      title: string;
+      title: string
       groups: Array<{
-        title: string;
+        title: string
         pullRequests: Array<{
-          title: string;
-          url: string;
-        }>;
-      }>;
-    };
-  };
-};
+          title: string
+          url: string
+        }>
+      }>
+    }
+  }
+}
 
 type AllLangTranslates = {
-  [K in keyof typeof languages]: Translates;
-};
+  [K in keyof typeof languages]: Translates
+}
 
 const enTranslates: Translates = {
   intro: {
@@ -266,7 +266,7 @@ I also work on personal web development projects aimed at honing my skills, as w
       ],
     },
   },
-};
+}
 
 const jaTranslates: Translates = merge({}, enTranslates, {
   intro: {
@@ -323,9 +323,9 @@ Reactを使用したフロントエンド開発を得意としており、仕事
       ],
     },
   },
-});
+})
 
 export const allLangTranslates: AllLangTranslates = {
   en: enTranslates,
   ja: jaTranslates,
-};
+}

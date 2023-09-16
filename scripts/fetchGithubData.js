@@ -1,11 +1,11 @@
-import dotenv from 'dotenv';
-import { writeFileSync } from 'fs';
-import prettier from 'prettier';
+import dotenv from 'dotenv'
+import { writeFileSync } from 'fs'
+import prettier from 'prettier'
 
-dotenv.config();
+dotenv.config()
 
-function format(code) {
-  return prettier.format(code, { parser: 'typescript' });
+async function format(code) {
+  return await prettier.format(code, { parser: 'typescript' })
 }
 
 async function getWeeklyContributions() {
@@ -38,26 +38,30 @@ async function getWeeklyContributions() {
         username: process.env.GITHUB_USERNAME,
       },
     }),
-  });
+  })
 
-  const data = await response.json();
+  const data = await response.json()
+  console.log('data:', data)
 
-  const weeklyContributions = [[], [], [], [], [], [], []];
+  const weeklyContributions = [[], [], [], [], [], [], []]
+  console.log('weeklyContributions:', weeklyContributions)
 
   const weeks =
-    data.data.user.contributionsCollection.contributionCalendar.weeks;
+    data.data.user.contributionsCollection.contributionCalendar.weeks
 
   weeks.forEach((week) => {
-    const contributionDaysList = week.contributionDays;
+    const contributionDaysList = week.contributionDays
 
     contributionDaysList.forEach((day) => {
-      const index = new Date(day.date).getDay();
+      const index = new Date(day.date).getDay()
 
-      weeklyContributions[index].push(day);
-    });
-  });
+      weeklyContributions[index].push(day)
+    })
+  })
 
-  return weeklyContributions;
+  console.log('weeklyContributions:', weeklyContributions)
+
+  return weeklyContributions
 }
 
 async function getMostUsedLanguages() {
@@ -92,51 +96,53 @@ async function getMostUsedLanguages() {
         username: process.env.GITHUB_USERNAME,
       },
     }),
-  });
+  })
 
-  const data = await response.json();
+  const data = await response.json()
   const languages = data.data.user.repositories.nodes.reduce((acc, node) => {
     node.languages.edges.forEach((edge) => {
-      const languageName = edge.node.name;
-      const languageSize = edge.size;
-      const languageColor = edge.node.color;
-      const language = acc.find((language) => language.name === languageName);
+      const languageName = edge.node.name
+      const languageSize = edge.size
+      const languageColor = edge.node.color
+      const language = acc.find((language) => language.name === languageName)
       if (language) {
-        language.totalSize += languageSize;
+        language.totalSize += languageSize
       } else {
         acc.push({
           name: languageName,
           totalSize: languageSize,
           color: languageColor,
-        });
+        })
       }
-    });
-    return acc;
-  }, []);
+    })
+    return acc
+  }, [])
 
   languages.sort((a, b) => {
-    return b.totalSize - a.totalSize;
-  });
+    return b.totalSize - a.totalSize
+  })
 
-  return languages;
+  return languages
 }
 
 async function main() {
-  const weeklyContributions = await getWeeklyContributions();
+  const weeklyContributions = await getWeeklyContributions()
 
   writeFileSync(
     'src/data/weeklyContributions.js',
-    `export const weeklyContributions = ${format(
+    `export const weeklyContributions = ${await format(
       JSON.stringify(weeklyContributions),
     )}`,
-  );
+  )
 
-  const languages = await getMostUsedLanguages();
+  const languages = await getMostUsedLanguages()
 
   writeFileSync(
     'src/data/mostUsedLanguages.js',
-    `export const mostUsedLanguages = ${format(JSON.stringify(languages))}`,
-  );
+    `export const mostUsedLanguages = ${await format(
+      JSON.stringify(languages),
+    )}`,
+  )
 }
 
-main();
+await main()
