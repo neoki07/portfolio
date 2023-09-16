@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 export const weeklyContributions = [
   [
     { contributionCount: 3, date: "2022-09-11" },
@@ -385,3 +386,6 @@ export const weeklyContributions = [
     { contributionCount: 14, date: "2023-09-16" },
   ],
 ];
+=======
+export const weeklyContributions = [object Promise]
+>>>>>>> b23da3bce690563cb25ac4944c05f769a926b4ac
