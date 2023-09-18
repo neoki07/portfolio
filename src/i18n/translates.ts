@@ -81,7 +81,6 @@ I also work on personal web development projects aimed at honing my skills, as w
     frameworksAndLibraries: [
       'React',
       'Next.js',
-      'Astro',
       'Tailwind CSS',
       'Tanstack Query',
       'Redux',
