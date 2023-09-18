@@ -87,6 +87,8 @@ I also work on personal web development projects aimed at honing my skills, as w
       'Storybook',
       'Swagger',
       'Jest',
+      'ESLint',
+      'Prettier',
       'Docker',
       'Laravel',
       'Ansible',
