@@ -30,32 +30,32 @@ const projectCategories: ProjectCategory[] = [
         <H2>{category}</H2>
         <div class="space-y-4">
           {groupedProjects[category]?.map((project) => (
-            <div class="rounded-lg border p-6 dark:border-gray-800">
+            <div class="rounded-lg border p-6">
               <div class="flex items-center space-x-3">
-                <div class="flex-1 font-semibold text-gray-700 dark:text-gray-300">
+                <div class="flex-1 font-semibold">
                   {project.name}
                 </div>
 
-                <div class="child:dark:hover:text-gray-400 text-gray-500 dark:text-gray-500">
+                <div>
                   <a
                     href={project.repoUrl}
                     aria-label={`GitHub repository for ${project.name}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="block hover:text-gray-500 hover:dark:text-gray-500 w-[1.125rem] text-gray-400"
+                    class="block w-[1.125rem]"
                   >
                     <GithubIcon />
                   </a>
                 </div>
 
                 {project.demoUrl && (
-                  <div class="child:dark:hover:text-gray-400 text-gray-500 dark:text-gray-500">
+                  <div>
                     <a
                       href={project.demoUrl}
                       aria-label={`Demo for ${project.name}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="block hover:text-gray-500 hover:dark:text-gray-500 w-[1.375rem] text-gray-400"
+                      class="block w-[1.375rem]"
                     >
                       <ExternalLinkIcon />
                     </a>
@@ -63,13 +63,13 @@ const projectCategories: ProjectCategory[] = [
                 )}
 
                 {project.packageUrl && (
-                  <div class="child:dark:hover:text-gray-400 text-gray-500 dark:text-gray-500">
+                  <div>
                     <a
                       href={project.packageUrl}
                       aria-label={`Package link for ${project.name}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="block hover:text-gray-500 hover:dark:text-gray-500 w-[1.375rem] text-gray-400"
+                      class="block w-[1.375rem]"
                     >
                       <PackageIcon />
                     </a>

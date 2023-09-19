@@ -5,4 +5,5 @@ interface Props extends HTMLAttributes<'a'> {}
 const props = Astro.props;
 ---
 
-<a class="underline underline-offset-4 decoration-gray-300 hover:decoration-gray-400 hover:text-gray-900 dark:decoration-gray-600 dark:hover:decoration-gray-400 dark:hover:text-gray-400" {...props}><slot /></a>
+<!--<a class="underline underline-offset-4 decoration-gray-300 hover:decoration-gray-400 hover:text-gray-900 dark:decoration-gray-600 dark:hover:decoration-gray-400 dark:hover:text-gray-400" {...props}><slot /></a>-->
+<a class="underline underline-offset-4" {...props}><slot /></a>
