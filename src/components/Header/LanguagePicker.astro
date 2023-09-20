@@ -7,13 +7,13 @@ import { defaultLang, languages } from '../../i18n/translates';
     Object.entries(languages).map(([lang, label], index) => (
       <>
         {index !== 0 && (
-          <li class="h-4 w-[0.0625rem] bg-gray-300 dark:bg-gray-700" />
+          <li class="h-4 w-[0.0625rem] bg-color-border-light dark:bg-color-border-dark" />
         )}
         <li class="flex items-center justify-center">
           <a
             href={lang === defaultLang ? '/' : `/${lang}`}
             aria-label={label}
-            class="text-sm font-light hover:text-gray-600 hover:dark:text-gray-400"
+            class="text-sm font-light"
           >
             {label}
           </a>
