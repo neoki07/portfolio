@@ -5,4 +5,4 @@ interface Props extends HTMLAttributes<'a'> {}
 const props = Astro.props;
 ---
 
-<a class="underline underline-offset-4 decoration-color-border-light hover:decoration-color-text-primary-light dark:decoration-color-border-dark dark:hover:decoration-color-text-primary-dark" {...props}><slot /></a>
+<a class="underline underline-offset-4 decoration-color-border-light hover:text-color-text-primary-light hover:decoration-color-text-primary-light dark:decoration-color-border-dark dark:hover:text-color-text-primary-dark dark:hover:decoration-color-text-primary-dark" {...props}><slot /></a>
