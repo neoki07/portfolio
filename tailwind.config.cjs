@@ -27,6 +27,14 @@ module.exports = {
         light: '#afb8c1',
         dark: '#7d8590',
       },
+      'color-badge': {
+        light: '#0969da',
+        dark: '#2f81f7'
+      },
+      'color-badge-bg': {
+        light: '#ddf4ff',
+        dark: '#388bfd1a'
+      },
       'color-sun': '#fb923c',
       'color-moon': '#3b82f6',
     },
