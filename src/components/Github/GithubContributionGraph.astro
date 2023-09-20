@@ -11,14 +11,14 @@ function getContributionCountLevel(contributionCount: number) {
 }
 
 const contributionColorStyles = [
-  'bg-gray-200 dark:bg-gray-800', // 0
-  'bg-sky-200 dark:bg-sky-900', //   1--5
-  'bg-sky-300 dark:bg-sky-700', //   6--10
-  'bg-sky-500 dark:bg-sky-500', //   11--15
-  'bg-sky-600 dark:bg-sky-400', //   16--20
-  'bg-sky-700 dark:bg-sky-300', //   21--25
-  'bg-sky-800 dark:bg-sky-200', //   26--30
-  'bg-sky-900 dark:bg-sky-100', //   31--
+  'bg-color-contribution-0-light dark:bg-color-contribution-0-dark', // 0
+  'bg-color-contribution-1-light dark:bg-color-contribution-1-dark', //   1--5
+  'bg-color-contribution-2-light dark:bg-color-contribution-2-dark', //   6--10
+  'bg-color-contribution-3-light dark:bg-color-contribution-3-dark', //   11--15
+  'bg-color-contribution-4-light dark:bg-color-contribution-4-dark', //   16--20
+  'bg-color-contribution-5-light dark:bg-color-contribution-5-dark', //   21--25
+  'bg-color-contribution-6-light dark:bg-color-contribution-6-dark', //   26--30
+  'bg-color-contribution-7-light dark:bg-color-contribution-7-dark', //   31--
 ];
 
 function getColorStyle(contributionCount: number) {
@@ -75,8 +75,7 @@ function getWeekday(date: Date) {
                     isFirstHalfContribution ? 'hidden md:table-cell' : ''
                   } group relative h-2.5 w-2.5 rounded-sm`}
                 >
-                  <span class="pointer-events-none invisible absolute left-1/2 top-[-45px] z-10 inline-block -translate-x-1/2 whitespace-nowrap rounded-md px-[0.875rem] py-[0.5625rem] text-xs opacity-0 before:pointer-events-none before:absolute before:bottom-[-13px] before:left-1/2 before:z-10 before:ml-[-7px] before:border-[7px] before:border-x-transparent before:border-b-transparent before:content-[''] group-hover:visible group-hover:opacity-100 before:dark:border-x-transparent before:dark:border-b-transparent">
-                  <!--<span class="pointer-events-none invisible absolute left-1/2 top-[-45px] z-10 inline-block -translate-x-1/2 whitespace-nowrap rounded-md bg-black px-[0.875rem] py-[0.5625rem] text-xs text-white opacity-0 before:pointer-events-none before:absolute before:bottom-[-13px] before:left-1/2 before:z-10 before:ml-[-7px] before:border-[7px] before:border-black before:border-x-transparent before:border-b-transparent before:content-[''] group-hover:visible group-hover:opacity-100 dark:bg-gray-500 dark:text-gray-300 before:dark:border-gray-500 before:dark:border-x-transparent before:dark:border-b-transparent">-->
+                  <span class="pointer-events-none invisible absolute left-1/2 top-[-45px] z-10 inline-block -translate-x-1/2 whitespace-nowrap rounded-md px-[0.875rem] py-[0.5625rem] text-xs text-color-tooltip-light opacity-0 before:pointer-events-none before:absolute before:bottom-[-13px] before:left-1/2 before:z-10 before:ml-[-7px] before:border-[7px] before:border-black before:border-x-transparent before:border-b-transparent before:content-[''] group-hover:visible group-hover:opacity-100 bg-color-tooltip-bg-light dark:bg-color-tooltip-bg-dark before:border-color-tooltip-bg-light before:dark:border-color-tooltip-bg-dark before:dark:border-x-transparent before:dark:border-b-transparent">
                     {`${
                       contribution.contributionCount === 0
                         ? 'No contributions'
