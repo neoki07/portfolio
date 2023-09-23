@@ -1,7 +1,7 @@
 ---
 import groupBy from 'lodash/groupBy';
 import type { ProjectCategory } from '../../../../i18n/translates';
-import { getLangFromUrl, useTranslations } from '../../../../i18n/utils';
+import { getLangFromUrl,useTranslations } from '../../../../i18n/utils';
 import Badge from '../../../shared/Badge.astro';
 import H1 from '../../../shared/H1.astro';
 import H2 from '../../../shared/H2.astro';
@@ -42,7 +42,7 @@ const projectCategories: ProjectCategory[] = [
                     aria-label={`GitHub repository for ${project.name}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="block w-[1.125rem]"
+                    class="block w-[1.125rem] hover:opacity-70"
                   >
                     <GithubIcon />
                   </a>
@@ -55,7 +55,7 @@ const projectCategories: ProjectCategory[] = [
                       aria-label={`Demo for ${project.name}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="block w-[1.375rem]"
+                      class="block w-[1.375rem] hover:opacity-70"
                     >
                       <ExternalLinkIcon />
                     </a>
@@ -69,7 +69,7 @@ const projectCategories: ProjectCategory[] = [
                       aria-label={`Package link for ${project.name}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="block w-[1.375rem]"
+                      class="block w-[1.375rem] hover:opacity-70"
                     >
                       <PackageIcon />
                     </a>
