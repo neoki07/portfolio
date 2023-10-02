@@ -3,6 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
+    "prepare": "bun fetch:github-data",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
@@ -10,7 +11,7 @@
     "astro": "astro",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "fetch:github-data": "node scripts/fetchGithubData.js"
+    "fetch:github-data": "bun scripts/fetchGithubData.js"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.0.0",
