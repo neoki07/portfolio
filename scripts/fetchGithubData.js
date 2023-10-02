@@ -41,10 +41,8 @@ async function getWeeklyContributions() {
   })
 
   const data = await response.json()
-  console.log('data:', data)
 
   const weeklyContributions = [[], [], [], [], [], [], []]
-  console.log('weeklyContributions:', weeklyContributions)
 
   const weeks =
     data.data.user.contributionsCollection.contributionCalendar.weeks
@@ -58,8 +56,6 @@ async function getWeeklyContributions() {
       weeklyContributions[index].push(day)
     })
   })
-
-  console.log('weeklyContributions:', weeklyContributions)
 
   return weeklyContributions
 }
