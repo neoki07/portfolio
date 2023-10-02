@@ -3,7 +3,7 @@
   "type": "module",
   "version": "0.0.1",
   "scripts": {
-    "prepare": "bun fetch:github-data && bun build",
+    "prepare": "bun fetch:github-data",
     "dev": "astro dev",
     "start": "astro dev",
     "build": "astro build",
