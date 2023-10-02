@@ -1,5 +1,6 @@
 import dotenv from 'dotenv'
 import { writeFileSync } from 'fs'
+import { join } from 'path'
 import prettier from 'prettier'
 
 dotenv.config()
@@ -122,10 +123,12 @@ async function getMostUsedLanguages() {
 }
 
 async function main() {
+  const outputDir = 'src/generated'
+
   const weeklyContributions = await getWeeklyContributions()
 
   writeFileSync(
-    'src/data/weeklyContributions.js',
+    join(outputDir, 'weeklyContributions.js'),
     `export const weeklyContributions = ${await format(
       JSON.stringify(weeklyContributions),
     )}`,
@@ -134,7 +137,7 @@ async function main() {
   const languages = await getMostUsedLanguages()
 
   writeFileSync(
-    'src/data/mostUsedLanguages.js',
+    join(outputDir, 'mostUsedLanguages.js'),
     `export const mostUsedLanguages = ${await format(
       JSON.stringify(languages),
     )}`,

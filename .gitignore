@@ -24,5 +24,11 @@ pnpm-debug.log*
 .idea
 .vscode
 
+# generated files
+src/generated/*
+
+# git files
+!.gitkeep
+
 # misc
 .vercel
