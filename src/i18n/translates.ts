@@ -206,7 +206,7 @@ I also work on personal web development projects aimed at honing my skills, as w
         packageUrl:
           'https://www.npmjs.com/package/prettier-plugin-astro-organize-imports',
         description: 'A Prettier plugin for formatting imports in Astro files',
-        technologies: ['TypeScript', 'Prettier', 'Astro', 'Rollup'],
+        technologies: ['TypeScript', 'Prettier', 'Astro', 'esbuild'],
         category: 'Prettier Plugins',
       },
       {
