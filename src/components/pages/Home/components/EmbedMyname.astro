@@ -1,21 +1,21 @@
 ---
-import { MYNAME } from '../../../../constants/myname';
+import { MYNAME } from '../../../../constants/me'
 
-const mynameTag = '{myname}';
+const mynameTag = '{myname}'
 
 function splitTextWithMyname(text: string) {
-  const regex = new RegExp(`(${mynameTag})`, 'g');
-  return text.split(regex);
+  const regex = new RegExp(`(${mynameTag})`, 'g')
+  return text.split(regex)
 }
 
-const { text } = Astro.props;
-const splitTexts = splitTextWithMyname(text);
+const { text } = Astro.props
+const splitTexts = splitTextWithMyname(text)
 ---
 
 <>
   {
     splitTexts.map((text) =>
-      text === mynameTag ? <strong>{MYNAME}</strong> : <>{text}</>
+      text === mynameTag ? <strong>{MYNAME}</strong> : <>{text}</>,
     )
   }
 </>

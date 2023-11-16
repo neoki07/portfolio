@@ -1,12 +1,16 @@
 ---
-import { MYNAME } from '../../../../constants/myname';
+import { AVATAR_URL, MYNAME } from '../../../../constants/me'
 ---
 
 <div class="flex flex-col items-center">
-  <a href={`https://github.com/${MYNAME}`} target="_blank" rel="noopener noreferrer">
+  <a
+    href={`https://github.com/${MYNAME}`}
+    target="_blank"
+    rel="noopener noreferrer"
+  >
     <img
       class="mb-4 h-24 w-24 rounded-full shadow-lg"
-      src="/avatar.webp"
+      src={AVATAR_URL}
       alt="Bonnie image"
     />
   </a>
