@@ -30,11 +30,11 @@ module.exports = {
       },
       'color-badge': {
         light: '#0969da',
-        dark: '#2f81f7'
+        dark: '#2f81f7',
       },
       'color-badge-bg': {
         light: '#ddf4ff',
-        dark: '#388bfd1a'
+        dark: '#388bfd1a',
       },
       'color-tooltip': {
         light: '#ffffff',
