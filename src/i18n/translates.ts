@@ -90,6 +90,7 @@ I also work on personal web development projects aimed at honing my skills, as w
       'Jest',
       'Vitest',
       'Playwright',
+      'Mock Service Worker',
       'ESLint',
       'Prettier',
       'Docker',
