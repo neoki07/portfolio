@@ -94,6 +94,7 @@ I also work on personal web development projects aimed at honing my skills, as w
       'ESLint',
       'Prettier',
       'Docker',
+      'Fiber',
       'Laravel',
       'Ansible',
     ],
