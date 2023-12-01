@@ -7,30 +7,37 @@ import AnchorText from '../shared/AnchorText.astro'
   <p
     class="text-sm text-color-text-secondary-light dark:text-color-text-secondary-dark"
   >
-    Built by <AnchorText
+    {'Built by '}
+    <AnchorText
       href="https://github.com/ot07"
       target="_blank"
       rel="noopener noreferrer"
     >
       {MYNAME}
-    </AnchorText> using <AnchorText
+    </AnchorText>
+    {' using '}
+    <AnchorText
       href="https://astro.build"
       target="_blank"
       rel="noopener noreferrer"
     >
-      Astro
-    </AnchorText>, hosted on <AnchorText
+      {'Astro'}
+    </AnchorText>
+    {', hosted on '}
+    <AnchorText
       href="https://vercel.com/dashboard"
       target="_blank"
       rel="noopener noreferrer"
     >
-      Vercel
-    </AnchorText>. The source code is available on <AnchorText
+      {'Vercel'}
+    </AnchorText>
+    {'. The source code is available on '}
+    <AnchorText
       href="https://github.com/ot07/portfolio"
       target="_blank"
       rel="noopener noreferrer"
     >
-      GitHub
+      {'GitHub'}
     </AnchorText>.
   </p>
 </footer>
