@@ -5,13 +5,14 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "prebuild": "bun fetch:github-data",
+    "prebuild": "bun fetch:github-data && bun download:avatar",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "fetch:github-data": "bun scripts/fetchGithubData.js"
+    "fetch:github-data": "bun scripts/fetchGithubData.js",
+    "download:avatar": "bun scripts/downloadAvatar.js"
   },
   "dependencies": {
     "@astrojs/tailwind": "^5.0.0",
