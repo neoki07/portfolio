@@ -172,6 +172,25 @@ I also work on personal web development projects aimed at honing my skills, as w
         category: 'Websites',
       },
       {
+        name: 'prettier-plugin-astro-organize-imports',
+        repoUrl:
+          'https://github.com/ot07/prettier-plugin-astro-with-organize-imports',
+        packageUrl:
+          'https://www.npmjs.com/package/prettier-plugin-astro-organize-imports',
+        description: 'A Prettier plugin for formatting imports in Astro files',
+        technologies: ['TypeScript', 'Prettier', 'Astro', 'esbuild'],
+        category: 'Prettier Plugins',
+      },
+      {
+        name: 'git-co',
+        repoUrl: 'https://github.com/ot07/git-co',
+        packageUrl: 'https://crates.io/crates/git-co',
+        description:
+          'A CLI tool for branch switching by providing a selection-based checkout process',
+        technologies: ['Rust', 'clap', 'skim'],
+        category: 'CLI Tools',
+      },
+      {
         name: 'sf2-synth-audio-worklet',
         repoUrl: 'https://github.com/resonance-box/sf2-synth-audio-worklet',
         packageUrl: 'https://www.npmjs.com/package/sf2-synth-audio-worklet',
@@ -203,25 +222,6 @@ I also work on personal web development projects aimed at honing my skills, as w
           'sf2-synth-audio-worklet (my library)',
         ],
         category: 'npm Packages',
-      },
-      {
-        name: 'prettier-plugin-astro-organize-imports',
-        repoUrl:
-          'https://github.com/ot07/prettier-plugin-astro-with-organize-imports',
-        packageUrl:
-          'https://www.npmjs.com/package/prettier-plugin-astro-organize-imports',
-        description: 'A Prettier plugin for formatting imports in Astro files',
-        technologies: ['TypeScript', 'Prettier', 'Astro', 'esbuild'],
-        category: 'Prettier Plugins',
-      },
-      {
-        name: 'git-co',
-        repoUrl: 'https://github.com/ot07/git-co',
-        packageUrl: 'https://crates.io/crates/git-co',
-        description:
-          'A CLI tool for branch switching by providing a selection-based checkout process',
-        technologies: ['Rust', 'clap', 'skim'],
-        category: 'CLI Tools',
       },
     ],
   },
