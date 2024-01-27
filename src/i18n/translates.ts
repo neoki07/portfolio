@@ -104,7 +104,7 @@ I also work on personal web development projects aimed at honing my skills, as w
     projects: [
       {
         name: '[WIP] Next Bazaar',
-        repoUrl: 'https://github.com/ot07/next-bazaar',
+        repoUrl: 'https://github.com/neokidev/next-bazaar',
         demoUrl: 'https://next-bazaar.vercel.app',
         description:
           'An online shopping website for buying and selling products',
@@ -131,7 +131,7 @@ I also work on personal web development projects aimed at honing my skills, as w
       },
       {
         name: '[WIP] Myposts',
-        repoUrl: 'https://github.com/ot07/myposts',
+        repoUrl: 'https://github.com/neokidev/myposts',
         demoUrl: 'https://myposts-dev.vercel.app',
         description:
           'A platform where you can view and share posts in Markdown format',
@@ -151,7 +151,7 @@ I also work on personal web development projects aimed at honing my skills, as w
       },
       {
         name: 'Music Transformer Playground',
-        repoUrl: 'https://github.com/ot07/music-transformer-playground',
+        repoUrl: 'https://github.com/neokidev/music-transformer-playground',
         demoUrl: 'https://music-transformer-playground.vercel.app',
         description:
           'A playground to generate piano performances easily using AI called Music Transformer',
@@ -174,7 +174,7 @@ I also work on personal web development projects aimed at honing my skills, as w
       {
         name: 'prettier-plugin-astro-organize-imports',
         repoUrl:
-          'https://github.com/ot07/prettier-plugin-astro-with-organize-imports',
+          'https://github.com/neokidev/prettier-plugin-astro-organize-imports',
         packageUrl:
           'https://www.npmjs.com/package/prettier-plugin-astro-organize-imports',
         description: 'A Prettier plugin for formatting imports in Astro files',
@@ -183,7 +183,7 @@ I also work on personal web development projects aimed at honing my skills, as w
       },
       {
         name: 'git-co',
-        repoUrl: 'https://github.com/ot07/git-co',
+        repoUrl: 'https://github.com/neokidev/git-co',
         packageUrl: 'https://crates.io/crates/git-co',
         description:
           'A CLI tool for branch switching by providing a selection-based checkout process',
