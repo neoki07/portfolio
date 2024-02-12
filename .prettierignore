@@ -21,12 +21,5 @@ pnpm-debug.log*
 .DS_Store
 .vercel
 
-# lock files
-pnpm-lock.yaml
-
 # generated files by scripts
 src/data
-
-# IDE settings
-.idea
-.vscode
