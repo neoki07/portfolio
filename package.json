@@ -5,14 +5,14 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "prebuild": "bun fetch:github-data && bun download:avatar",
+    "prebuild": "bun fetch:github-data && bun fetch:avatar",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
     "fetch:github-data": "bun scripts/fetchGithubData.js",
-    "download:avatar": "bun scripts/downloadAvatar.js"
+    "fetch:avatar": "bun scripts/fetchAvatar.js"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.3",

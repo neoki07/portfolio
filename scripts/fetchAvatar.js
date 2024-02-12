@@ -10,4 +10,4 @@ const main = async () => {
   writeFileSync(OUTPUT_PATH, buffer)
 }
 
-await main()
+main()
