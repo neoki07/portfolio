@@ -21,7 +21,7 @@ pnpm-debug.log*
 .DS_Store
 
 # generated files
-src/generated/*
+*/__generated__/*
 
 # git files
 !.gitkeep

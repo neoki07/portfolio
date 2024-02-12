@@ -5,6 +5,8 @@ import prettier from 'prettier'
 
 dotenv.config()
 
+const OUTPUT_DIR = './src/__generated__'
+
 async function format(code) {
   return await prettier.format(code, { parser: 'typescript' })
 }
@@ -123,12 +125,10 @@ async function getMostUsedLanguages() {
 }
 
 async function main() {
-  const outputDir = 'src/generated'
-
   const weeklyContributions = await getWeeklyContributions()
 
   writeFileSync(
-    join(outputDir, 'weeklyContributions.js'),
+    join(OUTPUT_DIR, 'weeklyContributions.js'),
     `export const weeklyContributions = ${await format(
       JSON.stringify(weeklyContributions),
     )}`,
@@ -137,7 +137,7 @@ async function main() {
   const languages = await getMostUsedLanguages()
 
   writeFileSync(
-    join(outputDir, 'mostUsedLanguages.js'),
+    join(OUTPUT_DIR, 'mostUsedLanguages.js'),
     `export const mostUsedLanguages = ${await format(
       JSON.stringify(languages),
     )}`,

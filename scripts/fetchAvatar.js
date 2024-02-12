@@ -1,7 +1,7 @@
 import { writeFileSync } from 'fs'
 import { AVATAR_URL } from '../src/constants/me'
 
-const OUTPUT_PATH = './public/avatar.png'
+const OUTPUT_PATH = './public/__generated__/avatar.png'
 
 const main = async () => {
   const res = await fetch(AVATAR_URL)
