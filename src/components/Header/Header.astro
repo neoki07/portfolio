@@ -1,22 +1,20 @@
 ---
-import GithubIcon from '../shared/icons/GithubIcon.astro';
-import ZennIcon from '../shared/icons/ZennIcon.astro';
-import LanguagePicker from './LanguagePicker.astro';
-import ThemeToggle from './ThemeToggle.astro';
+import GithubIcon from '../shared/icons/GithubIcon.astro'
+import ZennIcon from '../shared/icons/ZennIcon.astro'
+import LanguagePicker from './LanguagePicker.astro'
+import ThemeToggle from './ThemeToggle.astro'
 ---
 
 <header class="p-6">
   <nav class="flex">
     <div class="flex-1"></div>
-    <div
-      class="flex items-center justify-end space-x-6 pointer-events-auto"
-    >
+    <div class="pointer-events-auto flex items-center justify-end space-x-6">
       <a
         href="https://zenn.dev/ot07"
         aria-label="Zenn"
         target="_blank"
         rel="noopener noreferrer"
-        class="w-[1.125rem] hover:opacity-70 pointer-events-auto"
+        class="pointer-events-auto w-[1.125rem] hover:opacity-70"
       >
         <ZennIcon />
       </a>
@@ -25,7 +23,7 @@ import ThemeToggle from './ThemeToggle.astro';
         aria-label="GitHub"
         target="_blank"
         rel="noopener noreferrer"
-        class="w-[1.125rem] hover:opacity-70 pointer-events-auto"
+        class="pointer-events-auto w-[1.125rem] hover:opacity-70"
       >
         <GithubIcon />
       </a>

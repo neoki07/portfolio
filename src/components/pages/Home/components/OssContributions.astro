@@ -1,17 +1,17 @@
 ---
-import groupBy from 'lodash/groupBy';
-import { getLangFromUrl, useTranslations } from '../../../../i18n/utils';
-import AnchorText from '../../../shared/AnchorText.astro';
-import H1 from '../../../shared/H1.astro';
-import H2 from '../../../shared/H2.astro';
+import groupBy from 'lodash/groupBy'
+import { getLangFromUrl, useTranslations } from '../../../../i18n/utils'
+import AnchorText from '../../../shared/AnchorText.astro'
+import H1 from '../../../shared/H1.astro'
+import H2 from '../../../shared/H2.astro'
 
-const lang = getLangFromUrl(Astro.url);
-const t = useTranslations(lang);
+const lang = getLangFromUrl(Astro.url)
+const t = useTranslations(lang)
 
 const groupedContributions = groupBy(
   t.ossContributions.contributions,
-  'project'
-);
+  'project',
+)
 ---
 
 <H1>{t.ossContributions.title}</H1>
@@ -37,29 +37,31 @@ const groupedContributions = groupBy(
       </div>
     ))
   }
-  
+
   <div>
     <H2>{t.ossContributions.others.title}</H2>
     <ul class="list-disc [&>li]:ml-8">
-    {t.ossContributions.others.groups.map((group) => (
-      <li class="space-y-1">
-        <div>{group.title}</div>
-        <ul class="list-circle [&>li]:ml-8 space-y-1">
-          {group.pullRequests.map((pullRequest) => (
-            <li>
-              <AnchorText
-                href={pullRequest.url}
-                area-label={pullRequest.title}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                {pullRequest.title}
-              </AnchorText>
-            </li>
-          ))}
-        </ul>
-      </li>
-    ))}
+      {
+        t.ossContributions.others.groups.map((group) => (
+          <li class="space-y-1">
+            <div>{group.title}</div>
+            <ul class="list-circle space-y-1 [&>li]:ml-8">
+              {group.pullRequests.map((pullRequest) => (
+                <li>
+                  <AnchorText
+                    href={pullRequest.url}
+                    area-label={pullRequest.title}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {pullRequest.title}
+                  </AnchorText>
+                </li>
+              ))}
+            </ul>
+          </li>
+        ))
+      }
     </ul>
   </div>
 </div>

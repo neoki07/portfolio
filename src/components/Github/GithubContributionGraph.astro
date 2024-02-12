@@ -1,13 +1,13 @@
 ---
-import { weeklyContributions } from '../../generated/weeklyContributions.js';
+import { weeklyContributions } from '../../generated/weeklyContributions.js'
 
 function getContributionCountLevel(contributionCount: number) {
   if (contributionCount === 0) {
-    return 0;
+    return 0
   } else if (contributionCount <= 30) {
-    return Math.ceil(contributionCount / 5);
+    return Math.ceil(contributionCount / 5)
   }
-  return 7;
+  return 7
 }
 
 const contributionColorStyles = [
@@ -19,10 +19,10 @@ const contributionColorStyles = [
   'bg-color-contribution-5-light dark:bg-color-contribution-5-dark', // 21--25
   'bg-color-contribution-6-light dark:bg-color-contribution-6-dark', // 26--30
   'bg-color-contribution-7-light dark:bg-color-contribution-7-dark', // 31--
-];
+]
 
 function getColorStyle(contributionCount: number) {
-  return contributionColorStyles[getContributionCountLevel(contributionCount)];
+  return contributionColorStyles[getContributionCountLevel(contributionCount)]
 }
 
 const months = [
@@ -38,20 +38,20 @@ const months = [
   'Oct',
   'Nov',
   'Dec',
-];
+]
 
 function formatDate(date: Date) {
-  const monthIndex = date.getMonth();
-  const monthName = months[monthIndex];
-  const day = date.getDate();
-  const year = date.getFullYear();
-  return monthName + ' ' + day + ', ' + year;
+  const monthIndex = date.getMonth()
+  const monthName = months[monthIndex]
+  const day = date.getDate()
+  const year = date.getFullYear()
+  return monthName + ' ' + day + ', ' + year
 }
 
-const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+const weekdays = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat']
 
 function getWeekday(date: Date) {
-  return weekdays[date.getDay()];
+  return weekdays[date.getDay()]
 }
 ---
 
@@ -61,13 +61,13 @@ function getWeekday(date: Date) {
   <tbody>
     {
       weeklyContributions.map((contributions) => {
-        const halfYearIndex = Math.floor(contributions.length / 2);
+        const halfYearIndex = Math.floor(contributions.length / 2)
 
         return (
           <tr>
             {contributions.map((contribution, index) => {
-              const date = new Date(contribution.date);
-              const isFirstHalfContribution = index < halfYearIndex;
+              const date = new Date(contribution.date)
+              const isFirstHalfContribution = index < halfYearIndex
 
               return (
                 <td
@@ -75,20 +75,20 @@ function getWeekday(date: Date) {
                     isFirstHalfContribution ? 'hidden md:table-cell' : ''
                   } group relative h-2.5 w-2.5 rounded-sm`}
                 >
-                  <span class="pointer-events-none invisible absolute left-1/2 top-[-45px] z-10 inline-block -translate-x-1/2 whitespace-nowrap rounded-md px-[0.875rem] py-[0.5625rem] text-xs text-color-tooltip-light opacity-0 before:pointer-events-none before:absolute before:bottom-[-13px] before:left-1/2 before:z-10 before:ml-[-7px] before:border-[7px] before:border-black before:border-x-transparent before:border-b-transparent before:content-[''] group-hover:visible group-hover:opacity-100 bg-color-tooltip-bg-light dark:bg-color-tooltip-bg-dark before:border-color-tooltip-bg-light before:dark:border-color-tooltip-bg-dark before:dark:border-x-transparent before:dark:border-b-transparent">
+                  <span class="before:border-black pointer-events-none invisible absolute left-1/2 top-[-45px] z-10 inline-block -translate-x-1/2 whitespace-nowrap rounded-md bg-color-tooltip-bg-light px-[0.875rem] py-[0.5625rem] text-xs text-color-tooltip-light opacity-0 before:pointer-events-none before:absolute before:bottom-[-13px] before:left-1/2 before:z-10 before:ml-[-7px] before:border-[7px] before:border-color-tooltip-bg-light before:border-x-transparent before:border-b-transparent before:content-[''] group-hover:visible group-hover:opacity-100 dark:bg-color-tooltip-bg-dark before:dark:border-color-tooltip-bg-dark before:dark:border-x-transparent before:dark:border-b-transparent">
                     {`${
                       contribution.contributionCount === 0
                         ? 'No contributions'
                         : contribution.contributionCount === 1
-                        ? '1 contribution'
-                        : contribution.contributionCount + ' contributions'
+                          ? '1 contribution'
+                          : contribution.contributionCount + ' contributions'
                     } on ${getWeekday(date)}, ${formatDate(date)}`}
                   </span>
                 </td>
-              );
+              )
             })}
           </tr>
-        );
+        )
       })
     }
   </tbody>
