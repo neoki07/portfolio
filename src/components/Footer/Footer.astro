@@ -1,5 +1,5 @@
 ---
-import { MYNAME } from '../../constants/me'
+import { GITHUB_NAME, GITHUB_USERNAME } from '../../constants/me'
 import AnchorText from '../shared/AnchorText.astro'
 ---
 
@@ -9,11 +9,11 @@ import AnchorText from '../shared/AnchorText.astro'
   >
     {'Built by '}
     <AnchorText
-      href="https://github.com/neokidev"
+      href=`https://github.com/${GITHUB_USERNAME}`
       target="_blank"
       rel="noopener noreferrer"
     >
-      {MYNAME}
+      {GITHUB_NAME}
     </AnchorText>
     {' using '}
     <AnchorText
@@ -33,7 +33,7 @@ import AnchorText from '../shared/AnchorText.astro'
     </AnchorText>
     {'. The source code is available on '}
     <AnchorText
-      href="https://github.com/neokidev/portfolio"
+      href=`https://github.com/${GITHUB_USERNAME}/portfolio`
       target="_blank"
       rel="noopener noreferrer"
     >

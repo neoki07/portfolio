@@ -1,10 +1,10 @@
 ---
-import { MYNAME } from '../../../../constants/me'
+import { GITHUB_NAME, GITHUB_USERNAME } from '../../../../constants/me'
 ---
 
 <div class="flex flex-col items-center">
   <a
-    href={`https://github.com/neokidev`}
+    href={`https://github.com/${GITHUB_USERNAME}`}
     target="_blank"
     rel="noopener noreferrer"
   >
@@ -14,5 +14,5 @@ import { MYNAME } from '../../../../constants/me'
       alt="Bonnie image"
     />
   </a>
-  <div class="mb-2 text-3xl font-extrabold">{MYNAME}</div>
+  <div class="mb-2 text-3xl font-extrabold">{GITHUB_NAME}</div>
 </div>

@@ -1,5 +1,5 @@
 ---
-import { MYNAME } from '../../../../constants/me'
+import { GITHUB_NAME } from '../../../../constants/me'
 
 const mynameTag = '{myname}'
 
@@ -15,7 +15,7 @@ const splitTexts = splitTextWithMyname(text)
 <>
   {
     splitTexts.map((text) =>
-      text === mynameTag ? <strong>{MYNAME}</strong> : <>{text}</>,
+      text === mynameTag ? <strong>{GITHUB_NAME}</strong> : <>{text}</>,
     )
   }
 </>
