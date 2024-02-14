@@ -269,6 +269,15 @@ I also work on personal web development projects aimed at honing my skills, as w
             },
           ],
         },
+        {
+          title: 'Fix translations',
+          pullRequests: [
+            {
+              title: 'microsoft/vscode-loc#1556',
+              url: 'https://github.com/microsoft/vscode-loc/issues/1556',
+            },
+          ],
+        },
       ],
     },
   },
