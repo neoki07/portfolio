@@ -15,20 +15,20 @@
     "fetch:avatar": "bun scripts/fetchAvatar.js"
   },
   "dependencies": {
-    "@astrojs/check": "^0.5.3",
+    "@astrojs/check": "^0.5.6",
     "@astrojs/tailwind": "^5.1.0",
-    "astro": "^4.3.6",
-    "dotenv": "^16.4.2",
+    "astro": "^4.4.5",
+    "dotenv": "^16.4.5",
     "lodash": "^4.17.21",
     "tailwindcss": "^3.4.1",
     "typescript": "^5.3.3"
   },
   "devDependencies": {
     "@types/lodash": "^4.14.202",
-    "@types/node": "^20.11.17",
+    "@types/node": "^20.11.20",
     "prettier": "^3.2.5",
     "prettier-plugin-astro": "^0.13.0",
-    "prettier-plugin-astro-organize-imports": "^0.4.2",
+    "prettier-plugin-astro-organize-imports": "^0.4.3",
     "prettier-plugin-organize-imports": "^3.2.4",
     "prettier-plugin-tailwindcss": "^0.5.11"
   }
