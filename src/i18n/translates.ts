@@ -207,6 +207,14 @@ I also work on personal web development projects aimed at honing my skills, as w
         category: 'npm Packages',
       },
       {
+        name: 'color-blindness-devtool',
+        repoUrl: 'https://github.com/neokidev/color-blindness-devtool',
+        description:
+          'Accessibility tool for simulating color blindness in web application development',
+        technologies: ['TypeScript', 'Web Components', 'Lit'],
+        category: 'npm Packages',
+      },
+      {
         name: '[WIP] Recital',
         repoUrl: 'https://github.com/resonance-box/recital',
         packageUrl:
