@@ -207,7 +207,7 @@ I also work on personal web development projects aimed at honing my skills, as w
         category: 'npm Packages',
       },
       {
-        name: 'color-blindness-devtool',
+        name: 'Color Blindness DevTool',
         repoUrl: 'https://github.com/neokidev/color-blindness-devtool',
         description:
           'Accessibility tool for simulating color blindness in web application development',
