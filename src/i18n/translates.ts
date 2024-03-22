@@ -209,6 +209,7 @@ I also work on personal web development projects aimed at honing my skills, as w
       {
         name: 'Color Blindness DevTool',
         repoUrl: 'https://github.com/neokidev/color-blindness-devtool',
+        packageUrl: 'https://www.npmjs.com/package/color-blindness-devtool',
         description:
           'Accessibility tool for simulating color blindness in web application development',
         technologies: ['TypeScript', 'Web Components', 'Lit'],
