@@ -40,12 +40,12 @@ const groupedContributions = groupBy(
 
   <div>
     <H2>{t.ossContributions.others.title}</H2>
-    <ul class="list-disc [&>li]:ml-8">
+    <ul class="list-disc [&>li:not(:first-child)]:mt-2 [&>li]:ml-8">
       {
         t.ossContributions.others.groups.map((group) => (
-          <li class="space-y-1">
+          <li>
             <div>{group.title}</div>
-            <ul class="list-circle space-y-1 [&>li]:ml-8">
+            <ul class="list-circle [&>li]:ml-8 [&>li]:mt-1">
               {group.pullRequests.map((pullRequest) => (
                 <li>
                   <AnchorText
