@@ -70,7 +70,7 @@ const enTranslates: Translates = {
     greeting: 'Hi there',
     paragraphs: [
       `I am {myname}, a web developer.
-I specialize in front-end development with React, and engage in back-end development using Laravel for work.
+I specialize in front-end development, and professionally, I am involved in full-stack development for corporate SaaS products.
 I also work on personal web development projects aimed at honing my skills, as well as pursuing my passion for music. Furthermore, I contribute to OSS projects, all of which I enjoy doing on a daily basis.`,
     ],
   },
@@ -297,7 +297,7 @@ const jaTranslates: Translates = merge({}, enTranslates, {
     greeting: 'こんにちは',
     paragraphs: [
       `Web開発者の{myname}です。
-Reactを使用したフロントエンド開発を得意としており、仕事ではLaravelを使ったバックエンド開発にも携わっています。
+フロントエンド開発を得意としており、仕事では企業向けSaaSプロダクトのフルスタック開発に携わっています。
 他にも、Web開発のスキル向上や趣味である音楽をテーマとした個人開発、OSSプロジェクトへのコントリビュートなども行っており、日々楽しみながら活動しています。`,
     ],
   },
