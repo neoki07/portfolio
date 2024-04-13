@@ -192,7 +192,7 @@ I also work on personal web development projects aimed at honing my skills, as w
       },
       {
         name: 'sf2-synth-audio-worklet',
-        repoUrl: 'https://github.com/resonance-box/sf2-synth-audio-worklet',
+        repoUrl: 'https://github.com/neokidev/sf2-synth-audio-worklet',
         packageUrl: 'https://www.npmjs.com/package/sf2-synth-audio-worklet',
         description: 'An Audio Worklet-based SoundFont2 synthesizer',
         technologies: [
