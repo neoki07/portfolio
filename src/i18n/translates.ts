@@ -1,5 +1,4 @@
 import merge from 'lodash/merge'
-import { GITHUB_USERNAME } from '../constants/me'
 
 export const languages = {
   en: 'EN',
@@ -109,7 +108,7 @@ I also work on personal web development projects aimed at honing my skills, as w
     projects: {
       nextBazaar: {
         name: '[WIP] Next Bazaar',
-        repoUrl: `https://github.com/${GITHUB_USERNAME}/next-bazaar`,
+        repoUrl: `https://github.com/neokidev/next-bazaar`,
         demoUrl: 'https://next-bazaar.vercel.app',
         description:
           'An online shopping website for buying and selling products',
@@ -136,7 +135,7 @@ I also work on personal web development projects aimed at honing my skills, as w
       },
       myposts: {
         name: '[WIP] Myposts',
-        repoUrl: `https://github.com/${GITHUB_USERNAME}/myposts`,
+        repoUrl: `https://github.com/neokidev/myposts`,
         demoUrl: 'https://myposts-dev.vercel.app',
         description:
           'A platform where you can view and share posts in Markdown format',
@@ -156,7 +155,7 @@ I also work on personal web development projects aimed at honing my skills, as w
       },
       musicTransformerPlayground: {
         name: 'Music Transformer Playground',
-        repoUrl: `https://github.com/${GITHUB_USERNAME}/music-transformer-playground`,
+        repoUrl: `https://github.com/neokidev/music-transformer-playground`,
         demoUrl: 'https://music-transformer-playground.vercel.app',
         description:
           'A playground to generate piano performances easily using AI called Music Transformer',
@@ -178,7 +177,7 @@ I also work on personal web development projects aimed at honing my skills, as w
       },
       prettierPluginAstroOrganizeImports: {
         name: 'prettier-plugin-astro-organize-imports',
-        repoUrl: `https://github.com/${GITHUB_USERNAME}/prettier-plugin-astro-organize-imports`,
+        repoUrl: `https://github.com/neokidev/prettier-plugin-astro-organize-imports`,
         packageUrl:
           'https://www.npmjs.com/package/prettier-plugin-astro-organize-imports',
         description: 'A Prettier plugin for formatting imports in Astro files',
@@ -187,7 +186,7 @@ I also work on personal web development projects aimed at honing my skills, as w
       },
       gitCo: {
         name: 'git-co',
-        repoUrl: `https://github.com/${GITHUB_USERNAME}/git-co`,
+        repoUrl: `https://github.com/neokidev/git-co`,
         packageUrl: 'https://crates.io/crates/git-co',
         description:
           'A CLI tool for branch switching by providing a selection-based checkout process',
