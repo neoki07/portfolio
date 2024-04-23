@@ -31,8 +31,8 @@ const projectCategories: ProjectCategory[] = [
         <div class="space-y-4">
           {groupedProjects[category]?.map((project) => (
             <div class="rounded-lg border border-color-border-light p-5 dark:border-color-border-dark">
-              <div class="flex items-center space-x-3">
-                <div class="flex-1 font-bold">{project.name}</div>
+              <div class="flex items-center gap-3">
+                <div class="mr-auto font-bold leading-4">{project.name}</div>
 
                 <div>
                   <a
@@ -40,7 +40,7 @@ const projectCategories: ProjectCategory[] = [
                     aria-label={`GitHub repository for ${project.name}`}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="block w-[1.125rem] hover:opacity-70"
+                    class="block w-4 scale-110 hover:opacity-70"
                   >
                     <GithubIcon />
                   </a>
@@ -53,7 +53,7 @@ const projectCategories: ProjectCategory[] = [
                       aria-label={`Demo for ${project.name}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="block w-[1.375rem] hover:opacity-70"
+                      class="block w-4 scale-[130%] hover:opacity-70"
                     >
                       <ExternalLinkIcon />
                     </a>
@@ -67,7 +67,7 @@ const projectCategories: ProjectCategory[] = [
                       aria-label={`Package link for ${project.name}`}
                       target="_blank"
                       rel="noopener noreferrer"
-                      class="block w-[1.375rem] hover:opacity-70"
+                      class="block w-4 scale-[135%] hover:opacity-70"
                     >
                       <PackageIcon />
                     </a>
@@ -75,7 +75,7 @@ const projectCategories: ProjectCategory[] = [
                 )}
               </div>
 
-              <p class="mt-2 text-sm leading-normal">{project.description}</p>
+              <p class="mt-4 text-sm leading-normal">{project.description}</p>
 
               <ul class="mt-4 flex flex-wrap gap-1.5">
                 {project.technologies.map((skill) => (
