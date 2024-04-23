@@ -259,7 +259,7 @@ I also work on personal web development projects aimed at honing my skills, as w
       },
       {
         pullRequest: {
-          title: 'feat(biome_css_analyzer): noUnknownUnit',
+          title: 'feat(biome_css_analyzer): noUnknownUnit (#2535)',
           url: 'https://github.com/biomejs/biome/pull/2535',
         },
         project: 'Biome',
