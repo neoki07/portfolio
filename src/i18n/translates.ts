@@ -92,6 +92,7 @@ I also work on personal web development projects aimed at honing my skills, as w
       'Vitest',
       'Playwright',
       'Mock Service Worker',
+      'Biome',
       'ESLint',
       'Prettier',
       'Docker',
@@ -252,6 +253,13 @@ I also work on personal web development projects aimed at honing my skills, as w
           url: 'https://github.com/mantinedev/mantine/pull/4281',
         },
         project: 'Mantine',
+      },
+      {
+        pullRequest: {
+          title: 'feat(biome_css_analyzer): noUnknownUnit',
+          url: 'https://github.com/biomejs/biome/pull/2535',
+        },
+        project: 'Biome',
       },
     ],
     others: {
