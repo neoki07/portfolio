@@ -29,15 +29,18 @@ type Translates = {
   }
   projects: {
     title: string
-    projects: Array<{
-      name: string
-      repoUrl: string
-      demoUrl?: string
-      packageUrl?: string
-      description: string
-      technologies: string[]
-      category: ProjectCategory
-    }>
+    projects: Record<
+      string,
+      {
+        name: string
+        repoUrl: string
+        demoUrl?: string
+        packageUrl?: string
+        description: string
+        technologies: string[]
+        category: ProjectCategory
+      }
+    >
   }
   ossContributions: {
     title: string
@@ -103,8 +106,8 @@ I also work on personal web development projects aimed at honing my skills, as w
   },
   projects: {
     title: 'Projects',
-    projects: [
-      {
+    projects: {
+      nextBazaar: {
         name: '[WIP] Next Bazaar',
         repoUrl: `https://github.com/${GITHUB_USERNAME}/next-bazaar`,
         demoUrl: 'https://next-bazaar.vercel.app',
@@ -131,7 +134,7 @@ I also work on personal web development projects aimed at honing my skills, as w
         ],
         category: 'Websites for Studying',
       },
-      {
+      myposts: {
         name: '[WIP] Myposts',
         repoUrl: `https://github.com/${GITHUB_USERNAME}/myposts`,
         demoUrl: 'https://myposts-dev.vercel.app',
@@ -151,7 +154,7 @@ I also work on personal web development projects aimed at honing my skills, as w
         ],
         category: 'Websites for Studying',
       },
-      {
+      musicTransformerPlayground: {
         name: 'Music Transformer Playground',
         repoUrl: `https://github.com/${GITHUB_USERNAME}/music-transformer-playground`,
         demoUrl: 'https://music-transformer-playground.vercel.app',
@@ -173,7 +176,7 @@ I also work on personal web development projects aimed at honing my skills, as w
         ],
         category: 'Websites',
       },
-      {
+      prettierPluginAstroOrganizeImports: {
         name: 'prettier-plugin-astro-organize-imports',
         repoUrl: `https://github.com/${GITHUB_USERNAME}/prettier-plugin-astro-organize-imports`,
         packageUrl:
@@ -182,7 +185,7 @@ I also work on personal web development projects aimed at honing my skills, as w
         technologies: ['TypeScript', 'Prettier', 'Astro', 'esbuild'],
         category: 'Prettier Plugins',
       },
-      {
+      gitCo: {
         name: 'git-co',
         repoUrl: `https://github.com/${GITHUB_USERNAME}/git-co`,
         packageUrl: 'https://crates.io/crates/git-co',
@@ -191,7 +194,7 @@ I also work on personal web development projects aimed at honing my skills, as w
         technologies: ['Rust', 'clap', 'skim'],
         category: 'CLI Tools',
       },
-      {
+      sf2SynthAudioWorklet: {
         name: 'sf2-synth-audio-worklet',
         repoUrl: 'https://github.com/neokidev/sf2-synth-audio-worklet',
         packageUrl: 'https://www.npmjs.com/package/sf2-synth-audio-worklet',
@@ -207,7 +210,7 @@ I also work on personal web development projects aimed at honing my skills, as w
         ],
         category: 'npm Packages',
       },
-      {
+      colorBlindnessDevtool: {
         name: 'Color Blindness DevTool',
         repoUrl: 'https://github.com/neokidev/color-blindness-devtool',
         packageUrl: 'https://www.npmjs.com/package/color-blindness-devtool',
@@ -216,7 +219,7 @@ I also work on personal web development projects aimed at honing my skills, as w
         technologies: ['TypeScript', 'Web Components', 'Lit'],
         category: 'npm Packages',
       },
-      {
+      recital: {
         name: '[WIP] Recital',
         repoUrl: 'https://github.com/resonance-box/recital',
         packageUrl:
@@ -233,7 +236,7 @@ I also work on personal web development projects aimed at honing my skills, as w
         ],
         category: 'npm Packages',
       },
-    ],
+    },
   },
   ossContributions: {
     title: 'OSS Contributions',
@@ -317,32 +320,36 @@ const jaTranslates: Translates = merge({}, enTranslates, {
   },
   projects: {
     title: 'プロジェクト',
-    projects: [
-      {
+    projects: {
+      nextBazaar: {
         description: '商品の売買ができるオンラインショッピングサイト',
       },
-      {
+      myposts: {
         description:
           'Markdown形式の記事を閲覧・共有することができるプラットフォーム',
       },
-      {
+      musicTransformerPlayground: {
         description:
           'Music Transformerと呼ばれるAIを使って、簡単にピアノの演奏を生成することができるプレイグラウンド',
       },
-      {
+      sf2SynthAudioWorklet: {
         description: 'Audio Workletを利用したSoundFont2シンセサイザー',
       },
-      {
+      colorBlindnessDevtool: {
+        description:
+          'Webアプリケーション開発における色覚異常をシミュレートするアクセシビリティツール',
+      },
+      prettierPluginAstroOrganizeImports: {
+        description: 'Astroファイルのimport文を整形するPrettierプラグイン',
+      },
+      gitCo: {
+        description: '選択形式でブランチを切り替える処理を提供するCLIツール',
+      },
+      recital: {
         description:
           'ブラウザ向けの音楽ツール（シーケンサーやピアノロールUIなど）',
       },
-      {
-        description: 'Astroファイルのimport文を整形するPrettierプラグイン',
-      },
-      {
-        description: '選択形式でブランチを切り替える処理を提供するCLIツール',
-      },
-    ],
+    },
   },
   ossContributions: {
     title: 'OSSコントリビューション',
