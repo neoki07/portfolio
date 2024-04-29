@@ -263,6 +263,13 @@ I also work on personal web development projects aimed at honing my skills, as w
         },
         project: 'Biome',
       },
+      {
+        pullRequest: {
+          title: 'feat(biome_css_analyzer): noUnknownFunction (#2570)',
+          url: 'https://github.com/biomejs/biome/pull/2570',
+        },
+        project: 'Biome',
+      },
     ],
     others: {
       title: 'Others',
