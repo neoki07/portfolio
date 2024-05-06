@@ -10,7 +10,6 @@ export const defaultLang = 'en'
 
 export type ProjectCategory =
   | 'Websites'
-  | 'Websites for Studying'
   | 'npm Packages'
   | 'Prettier Plugins'
   | 'CLI Tools'
@@ -107,53 +106,6 @@ I also work on personal web development projects aimed at honing my skills, as w
   projects: {
     title: 'Projects',
     projects: {
-      nextBazaar: {
-        name: '[WIP] Next Bazaar',
-        repoUrl: `https://github.com/${GITHUB_USERNAME}/next-bazaar`,
-        demoUrl: 'https://next-bazaar.vercel.app',
-        description:
-          'An online shopping website for buying and selling products',
-        technologies: [
-          'TypeScript',
-          'React',
-          'Next.js',
-          'Jest',
-          'Storybook',
-          'TanStack Query',
-          'React Hook Form',
-          'Zod',
-          'Mantine',
-          'Orval',
-          'Go',
-          'Fiber',
-          'sqlc',
-          'Swagger',
-          'Vercel',
-          'AWS App Runner',
-          'Amazon RDS',
-        ],
-        category: 'Websites for Studying',
-      },
-      myposts: {
-        name: '[WIP] Myposts',
-        repoUrl: `https://github.com/${GITHUB_USERNAME}/myposts`,
-        demoUrl: 'https://myposts-dev.vercel.app',
-        description:
-          'A platform where you can view and share posts in Markdown format',
-        technologies: [
-          'TypeScript',
-          'React',
-          'Next.js',
-          'tRPC',
-          'Tailwind CSS',
-          'Prisma',
-          'React Hook Form',
-          'Zod',
-          'Markdoc',
-          'Vercel',
-        ],
-        category: 'Websites for Studying',
-      },
       musicTransformerPlayground: {
         name: 'Music Transformer Playground',
         repoUrl: `https://github.com/${GITHUB_USERNAME}/music-transformer-playground`,
@@ -217,23 +169,6 @@ I also work on personal web development projects aimed at honing my skills, as w
         description:
           'Accessibility tool for simulating color blindness in web application development',
         technologies: ['TypeScript', 'Web Components', 'Lit'],
-        category: 'npm Packages',
-      },
-      recital: {
-        name: '[WIP] Recital',
-        repoUrl: 'https://github.com/resonance-box/recital',
-        packageUrl:
-          'https://www.npmjs.com/package/@resonance-box/react-recital',
-        description:
-          'A musical tools for the browser (Sequencer, Piano-Roll UI, etc.)',
-        technologies: [
-          'TypeScript',
-          'React',
-          'Vite',
-          'Zustand',
-          'Immer',
-          'sf2-synth-audio-worklet (my library)',
-        ],
         category: 'npm Packages',
       },
     },
@@ -328,13 +263,6 @@ const jaTranslates: Translates = merge({}, enTranslates, {
   projects: {
     title: 'プロジェクト',
     projects: {
-      nextBazaar: {
-        description: '商品の売買ができるオンラインショッピングサイト',
-      },
-      myposts: {
-        description:
-          'Markdown形式の記事を閲覧・共有することができるプラットフォーム',
-      },
       musicTransformerPlayground: {
         description:
           'Music Transformerと呼ばれるAIを使って、簡単にピアノの演奏を生成することができるプレイグラウンド',
@@ -351,10 +279,6 @@ const jaTranslates: Translates = merge({}, enTranslates, {
       },
       gitCo: {
         description: '選択形式でブランチを切り替える処理を提供するCLIツール',
-      },
-      recital: {
-        description:
-          'ブラウザ向けの音楽ツール（シーケンサーやピアノロールUIなど）',
       },
     },
   },
