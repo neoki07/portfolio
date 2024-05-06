@@ -7,15 +7,8 @@ import AnchorText from '../shared/AnchorText.astro'
   <p
     class="text-sm text-color-text-secondary-light dark:text-color-text-secondary-dark"
   >
-    {'Built by '}
-    <AnchorText
-      href=`https://github.com/${GITHUB_USERNAME}`
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      {GITHUB_NAME}
-    </AnchorText>
-    {' using '}
+    {`© ${new Date().getFullYear()} ${GITHUB_NAME}.`}
+    {'Built using '}
     <AnchorText
       href="https://astro.build"
       target="_blank"
@@ -23,15 +16,15 @@ import AnchorText from '../shared/AnchorText.astro'
     >
       {'Astro'}
     </AnchorText>
-    {', hosted on '}
+    {'and hosted on '}
     <AnchorText
       href="https://vercel.com/dashboard"
       target="_blank"
       rel="noopener noreferrer"
     >
       {'Vercel'}
-    </AnchorText>
-    {'. The source code is available on '}
+    </AnchorText>.
+    {'The source code is available on '}
     <AnchorText
       href=`https://github.com/${GITHUB_USERNAME}/portfolio`
       target="_blank"
