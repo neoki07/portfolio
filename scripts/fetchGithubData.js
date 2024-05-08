@@ -1,9 +1,6 @@
-import dotenv from 'dotenv'
 import { writeFileSync } from 'fs'
 import { join } from 'path'
 import prettier from 'prettier'
-
-dotenv.config()
 
 const OUTPUT_DIR = './src/__generated__'
 
