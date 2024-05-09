@@ -72,7 +72,7 @@ const enTranslates: Translates = {
     greeting: 'Hi there',
     paragraphs: [
       `I am {myname}, a web developer.
-I specialize in front-end development, and professionally, I am involved in full-stack development for corporate SaaS products.
+I specialize in front-end development, and professionally, I am involved in full-stack development of a SaaS product.
 I also work on personal web development projects aimed at honing my skills, as well as pursuing my passion for music. Furthermore, I contribute to OSS projects, all of which I enjoy doing on a daily basis.`,
     ],
   },
