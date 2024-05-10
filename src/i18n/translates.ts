@@ -84,10 +84,11 @@ I also work on personal web development projects aimed at honing my skills, as w
     frameworksAndLibraries: [
       'React',
       'Next.js',
-      'Vite',
-      'Tailwind CSS',
       'TanStack Query',
       'Redux',
+      'Vite',
+      'Tailwind CSS',
+      'Angular',
       'Storybook',
       'Swagger',
       'Jest',
