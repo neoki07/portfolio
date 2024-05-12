@@ -138,12 +138,12 @@ I also work on personal web development projects aimed at honing my skills, as w
         technologies: ['TypeScript', 'Prettier', 'Astro', 'esbuild'],
         category: 'Prettier Plugins',
       },
-      gitCo: {
-        name: 'git-co',
-        repoUrl: `https://github.com/${GITHUB_USERNAME}/git-co`,
-        packageUrl: 'https://crates.io/crates/git-co',
+      gibra: {
+        name: 'gibra',
+        repoUrl: `https://github.com/${GITHUB_USERNAME}/gibra`,
+        packageUrl: 'https://crates.io/crates/gibra',
         description:
-          'A CLI tool for branch switching by providing a selection-based checkout process',
+          'A command-line tool that enables interactive branch selection for git',
         technologies: ['Rust', 'clap', 'skim'],
         category: 'CLI Tools',
       },
@@ -278,8 +278,9 @@ const jaTranslates: Translates = merge({}, enTranslates, {
       prettierPluginAstroOrganizeImports: {
         description: 'Astroファイルのimport文を整形するPrettierプラグイン',
       },
-      gitCo: {
-        description: '選択形式でブランチを切り替える処理を提供するCLIツール',
+      gibra: {
+        description:
+          'gitの対話的なブランチ選択を可能にするコマンドラインツール',
       },
     },
   },
