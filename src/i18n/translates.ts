@@ -100,6 +100,7 @@ I also work on personal web development projects aimed at honing my skills, as w
       'Prettier',
       'Docker',
       'Fiber',
+      'Echo',
       'Laravel',
       'Ansible',
     ],
