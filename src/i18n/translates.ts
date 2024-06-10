@@ -208,6 +208,14 @@ I also work on personal web development projects aimed at honing my skills, as w
         },
         project: 'Biome',
       },
+      {
+        pullRequest: {
+          title:
+            'feat(biome_css_analyzer): noShorthandPropertyOverrides (#2958)',
+          url: 'https://github.com/biomejs/biome/pull/2958',
+        },
+        project: 'Biome',
+      },
     ],
     others: {
       title: 'Others',
