@@ -1,5 +1,5 @@
 import { writeFileSync } from 'fs'
-import { GITHUB_AVATAR_URL } from '../src/constants/me'
+import { GITHUB_AVATAR_URL } from '../src/env'
 
 const OUTPUT_PATH = './public/__generated__/avatar.png'
 

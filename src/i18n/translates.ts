@@ -1,5 +1,5 @@
 import merge from 'lodash/merge'
-import { GITHUB_USERNAME } from '../constants/me'
+import { GITHUB_USERNAME } from '../env'
 
 export const languages = {
   en: 'EN',
