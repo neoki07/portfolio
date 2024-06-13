@@ -20,7 +20,7 @@ const groupedContributions = groupBy(
     Object.entries(groupedContributions).map(([project, contributions]) => (
       <div>
         <H2>{project}</H2>
-        <ul class="list-disc [&>li]:ml-8">
+        <ul class="list-disc [&>li]:ml-8 [&>li]:mt-1">
           {contributions.map((contribution) => (
             <li>
               <AnchorText
