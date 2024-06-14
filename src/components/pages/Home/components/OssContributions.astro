@@ -4,6 +4,8 @@ import { getLangFromUrl, useTranslations } from '../../../../i18n/utils'
 import AnchorText from '../../../shared/ui/AnchorText.astro'
 import H1 from '../../../shared/ui/H1.astro'
 import H2 from '../../../shared/ui/H2.astro'
+import List from '../../../shared/ui/List.astro'
+import ListItem from '../../../shared/ui/ListItem.astro'
 
 const lang = getLangFromUrl(Astro.url)
 const t = useTranslations(lang)
@@ -20,9 +22,9 @@ const groupedContributions = groupBy(
     Object.entries(groupedContributions).map(([project, contributions]) => (
       <div>
         <H2>{project}</H2>
-        <ul class="list-disc [&>li]:ml-8 [&>li]:mt-1">
+        <List>
           {contributions.map((contribution) => (
-            <li>
+            <ListItem>
               <AnchorText
                 href={contribution.pullRequest.url}
                 area-label={contribution.pullRequest.title}
@@ -31,23 +33,23 @@ const groupedContributions = groupBy(
               >
                 {contribution.pullRequest.title}
               </AnchorText>
-            </li>
+            </ListItem>
           ))}
-        </ul>
+        </List>
       </div>
     ))
   }
 
   <div>
     <H2>{t.ossContributions.others.title}</H2>
-    <ul class="list-disc [&>li:not(:first-child)]:mt-2 [&>li]:ml-8">
+    <List>
       {
         t.ossContributions.others.groups.map((group) => (
-          <li>
+          <ListItem>
             <div>{group.title}</div>
-            <ul class="list-circle [&>li]:ml-8 [&>li]:mt-1">
+            <List>
               {group.pullRequests.map((pullRequest) => (
-                <li>
+                <ListItem>
                   <AnchorText
                     href={pullRequest.url}
                     area-label={pullRequest.title}
@@ -56,12 +58,12 @@ const groupedContributions = groupBy(
                   >
                     {pullRequest.title}
                   </AnchorText>
-                </li>
+                </ListItem>
               ))}
-            </ul>
-          </li>
+            </List>
+          </ListItem>
         ))
       }
-    </ul>
+    </List>
   </div>
 </div>
