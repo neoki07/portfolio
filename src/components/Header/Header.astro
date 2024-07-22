@@ -1,7 +1,4 @@
 ---
-import { GITHUB_USERNAME, ZENN_URL } from '../../env'
-import GithubIcon from '../shared/ui/icons/GithubIcon.astro'
-import ZennIcon from '../shared/ui/icons/ZennIcon.astro'
 import LanguagePicker from './LanguagePicker.astro'
 import ThemeToggle from './ThemeToggle.astro'
 ---
@@ -10,24 +7,6 @@ import ThemeToggle from './ThemeToggle.astro'
   <nav class="flex">
     <div class="flex-1"></div>
     <div class="pointer-events-auto flex items-center justify-end space-x-6">
-      <a
-        href={ZENN_URL}
-        aria-label="Zenn"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="pointer-events-auto w-[1.125rem] hover:opacity-70"
-      >
-        <ZennIcon />
-      </a>
-      <a
-        href=`https://github.com/${GITHUB_USERNAME}`
-        aria-label="GitHub"
-        target="_blank"
-        rel="noopener noreferrer"
-        class="pointer-events-auto w-[1.125rem] hover:opacity-70"
-      >
-        <GithubIcon />
-      </a>
       <LanguagePicker />
       <ThemeToggle />
     </div>

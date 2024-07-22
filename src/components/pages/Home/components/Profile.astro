@@ -1,18 +1,40 @@
 ---
-import { GITHUB_NAME, GITHUB_USERNAME } from '../../../../env'
+import { GITHUB_NAME, GITHUB_USERNAME, ZENN_URL } from '../../../../env'
+import GithubIcon from '../../../shared/ui/icons/GithubIcon.astro'
+import ZennIcon from '../../../shared/ui/icons/ZennIcon.astro'
 ---
 
-<div class="flex flex-col items-center">
+<div class="flex flex-col items-center space-y-6">
   <a
     href={`https://github.com/${GITHUB_USERNAME}`}
     target="_blank"
     rel="noopener noreferrer"
   >
     <img
-      class="mb-4 h-24 w-24 rounded-full shadow-lg"
+      class="h-24 w-24 rounded-full shadow-lg"
       src="__generated__/avatar.png"
       alt="Bonnie image"
     />
   </a>
-  <div class="mb-2 text-3xl font-extrabold">{GITHUB_NAME}</div>
+  <div class="text-3xl font-extrabold leading-4">{GITHUB_NAME}</div>
+  <div class="pointer-events-auto flex items-center justify-end space-x-4">
+    <a
+      href=`https://github.com/${GITHUB_USERNAME}`
+      aria-label="GitHub"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="pointer-events-auto size-5 hover:opacity-70"
+    >
+      <GithubIcon />
+    </a>
+    <a
+      href={ZENN_URL}
+      aria-label="Zenn"
+      target="_blank"
+      rel="noopener noreferrer"
+      class="pointer-events-auto size-5 hover:opacity-70"
+    >
+      <ZennIcon />
+    </a>
+  </div>
 </div>
