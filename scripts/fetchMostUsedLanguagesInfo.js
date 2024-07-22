@@ -8,59 +8,7 @@ async function format(code) {
   return await prettier.format(code, { parser: 'typescript' })
 }
 
-async function getWeeklyContributions() {
-  const response = await fetch('https://api.github.com/graphql', {
-    method: 'POST',
-    headers: {
-      Accept: 'application/json',
-      'Content-Type': 'application/json',
-      Authorization: `token ${process.env.GITHUB_ACCESS_TOKEN}`,
-    },
-    body: JSON.stringify({
-      query: `
-          query($username:String!) {
-            user(login: $username){
-              contributionsCollection {
-                contributionCalendar {
-                  totalContributions
-                  weeks {
-                    contributionDays {
-                      contributionCount
-                      date
-                    }
-                  }
-                }
-              }
-            }
-          }
-        `,
-      variables: {
-        username: process.env.GITHUB_USERNAME,
-      },
-    }),
-  })
-
-  const data = await response.json()
-
-  const weeklyContributions = [[], [], [], [], [], [], []]
-
-  const weeks =
-    data.data.user.contributionsCollection.contributionCalendar.weeks
-
-  weeks.forEach((week) => {
-    const contributionDaysList = week.contributionDays
-
-    contributionDaysList.forEach((day) => {
-      const index = new Date(day.date).getDay()
-
-      weeklyContributions[index].push(day)
-    })
-  })
-
-  return weeklyContributions
-}
-
-async function getMostUsedLanguages() {
+async function getMostUsedLanguagesInfo() {
   const response = await fetch('https://api.github.com/graphql', {
     method: 'POST',
     headers: {
@@ -122,16 +70,7 @@ async function getMostUsedLanguages() {
 }
 
 async function main() {
-  const weeklyContributions = await getWeeklyContributions()
-
-  writeFileSync(
-    join(OUTPUT_DIR, 'weeklyContributions.js'),
-    `export const weeklyContributions = ${await format(
-      JSON.stringify(weeklyContributions),
-    )}`,
-  )
-
-  const languages = await getMostUsedLanguages()
+  const languages = await getMostUsedLanguagesInfo()
 
   writeFileSync(
     join(OUTPUT_DIR, 'mostUsedLanguages.js'),

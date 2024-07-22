@@ -5,13 +5,13 @@
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "prebuild": "bun fetch:github-data && bun fetch:avatar",
+    "prebuild": "bun fetch:most-used-languages-info && bun fetch:avatar",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write .",
     "format:check": "prettier --check .",
-    "fetch:github-data": "bun scripts/fetchGithubData.js",
+    "fetch:most-used-languages-info": "bun scripts/fetchMostUsedLanguagesInfo.js",
     "fetch:avatar": "bun scripts/fetchAvatar.js"
   },
   "dependencies": {
