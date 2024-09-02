@@ -222,7 +222,7 @@ I also work on personal web development projects aimed at honing my skills, as w
       title: 'Others',
       groups: [
         {
-          title: 'Fix typos',
+          title: 'Fix documentation',
           pullRequests: [
             {
               title: 'mantinedev/mantine#4290',
@@ -304,7 +304,10 @@ const jaTranslates: Translates = merge({}, enTranslates, {
       title: 'その他',
       groups: [
         {
-          title: 'タイポ修正',
+          title: 'ドキュメント修正',
+        },
+        {
+          title: '翻訳修正',
         },
       ],
     },
