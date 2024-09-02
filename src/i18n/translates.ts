@@ -240,6 +240,10 @@ I also work on personal web development projects aimed at honing my skills, as w
               title: 'withastro/docs#3321',
               url: 'https://github.com/withastro/docs/pull/3321',
             },
+            {
+              title: 'ziglang/www.ziglang.org#364',
+              url: 'https://github.com/ziglang/www.ziglang.org/pull/364',
+            },
           ],
         },
         {
