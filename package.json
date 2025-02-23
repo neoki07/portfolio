@@ -24,8 +24,8 @@
   },
   "devDependencies": {
     "@types/lodash": "^4.17.15",
-    "@types/node": "^22.13.4",
-    "prettier": "^3.5.1",
+    "@types/node": "^22.13.5",
+    "prettier": "^3.5.2",
     "prettier-plugin-astro": "^0.14.1",
     "prettier-plugin-astro-organize-imports": "^0.4.11",
     "prettier-plugin-organize-imports": "^4.1.0",
